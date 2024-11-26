@@ -5,17 +5,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <title>Honkai Impact</title>
 </head>
 <body>
     <h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
-    <h1>Captain on brig, welcome to Honkai Impact 3rd!</h1>
+    <h1 class="text-light">Captain on brig, welcome to Honkai Impact 3rd!</h1>
 
     <div th:each="product : ${products}">
-        <li>
-            <p th:text="${product.name}">Name</p>
-            <p th:text="${product.price}">Price</p>
-        </li>
+        <div>
+            <p th:text="${product.name} + ' --- ' + ${product.price} + | euro|">Name</p>
+        </div>
     </div>
 </body>
 </html>

@@ -5,17 +5,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <title>Navigation Fragment</title>
 </head>
 <body>
 <div th:fragment="navigation">
-    <navbar class="d-flex justify-content-between">
+    <navbar class="d-flex justify-content-between bg-dark">
         <div class="d-flex justify-content-end m-1">
-            <a class="btn" th:href="@{/home}">Home</a>
-            <a class="btn" th:href="@{/hi3rd}">HI3rd</a>
-            <a class="btn" th:href="@{/gi}">GI</a>
-            <a class="btn" th:href="@{/hsr}">HSR</a>
-            <a class="btn" th:href="@{/zzz}">ZZZ</a>
+            <a class="btn text-primary" th:href="@{/home}">Home</a>
+            <a class="btn text-primary" th:href="@{/hi3rd}">HI3rd</a>
+            <a class="btn text-primary" th:href="@{/gi}">GI</a>
+            <a class="btn text-primary" th:href="@{/hsr}">HSR</a>
+            <a class="btn text-primary" th:href="@{/zzz}">ZZZ</a>
         </div>
     </navbar>
 </div>

@@ -11,7 +11,9 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+    private String image;
     private double price;
+    private String description;
 
     public Product(Integer id, String name, double price) {
         this.id = id;
