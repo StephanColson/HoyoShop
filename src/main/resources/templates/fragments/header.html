@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navigation Fragment</title>
+</head>
+<body>
+<div th:fragment="navigation">
+    <navbar class="d-flex justify-content-between">
+        <div class="d-flex justify-content-end m-1">
+            <a class="btn" th:href="@{/home}">Home</a>
+            <a class="btn" th:href="@{/hi3rd}">HI3rd</a>
+            <a class="btn" th:href="@{/gi}">GI</a>
+            <a class="btn" th:href="@{/hsr}">HSR</a>
+            <a class="btn" th:href="@{/zzz}">ZZZ</a>
+        </div>
+    </navbar>
+</div>
+</body>
+</html>
