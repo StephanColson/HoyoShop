@@ -11,5 +11,25 @@
 <body>
     <h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
     <h2 class="text-light">Welcome to the land of Teyvat Traveller!</h2>
+    <div class="container">
+        <div class="row">
+            <div th:each="product : ${products}" class="col-lg-4 my-2">
+                <div class="col-lg-12">
+                    <div class="card bg-dark-subtle">
+                        <img src="" class="card-img-top">
+                        <div class="card-body">
+                            <h4 class="card-title text-danger" th:text="${product.name}">Name</h4>
+                            <p class="card-text text-primary" th:text="${product.description}">Description</p>
+                        </div>
+                        <div class="card-footer text-danger">
+                            <p th:text="${product.price} + | Euro|">The price</p>
+                            <a class="btn bg-danger text-light-emphasis">Buy</a>
+                            <a class="btn bg-info text-light-emphasis">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

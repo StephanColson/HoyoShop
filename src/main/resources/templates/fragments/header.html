@@ -12,11 +12,12 @@
 <div th:fragment="navigation">
     <navbar class="d-flex justify-content-between bg-dark">
         <div class="d-flex justify-content-end m-1">
-            <a class="btn text-primary" th:href="@{/home}">Home</a>
-            <a class="btn text-primary" th:href="@{/hi3rd}">HI3rd</a>
-            <a class="btn text-primary" th:href="@{/gi}">GI</a>
-            <a class="btn text-primary" th:href="@{/hsr}">HSR</a>
-            <a class="btn text-primary" th:href="@{/zzz}">ZZZ</a>
+            <a class="btn" th:classappend="${activePage == 'home' ? 'text-primary' : 'text-light'}" th:href="@{/home}">Home</a>
+            <a class="btn" th:classappend="${activePage == 'hi3rd' ? 'text-primary' : 'text-light'}" th:href="@{/hi3rd}">HI3rd</a>
+            <a class="btn" th:classappend="${activePage == 'gi' ? 'text-primary' : 'text-light'}" th:href="@{/gi}">GI</a>
+            <a class="btn" th:classappend="${activePage == 'hsr' ? 'text-primary' : 'text-light'}" th:href="@{/hsr}">HSR</a>
+            <a class="btn" th:classappend="${activePage == 'zzz' ? 'text-primary' : 'text-light'}" th:href="@{/zzz}">ZZZ</a>
+            <a class="btn" th:classappend="${activePage == 'cart' ? 'text-primary' : 'text-light'}" th:href="@{/cart}">Cart</a>
         </div>
     </navbar>
 </div>

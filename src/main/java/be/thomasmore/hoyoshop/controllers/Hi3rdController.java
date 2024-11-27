@@ -16,6 +16,7 @@ public class Hi3rdController {
     public String hi3rd(Model model) {
         final Iterable<Product> products = productRepository.findAll();
         model.addAttribute("products", products);
+        model.addAttribute("activePage", "hi3rd");
         return "hi3rd";
     }
 }

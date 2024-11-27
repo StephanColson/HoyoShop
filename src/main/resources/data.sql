@@ -2,7 +2,11 @@
 INSERT INTO product (name, price, description)
 VALUES ('Kiana Kaslana Plushy', 15, 'Made with cotton'),
        ('Bronya Plushy', 14, 'Made with cotton and contains a bit of metal'),
-       ('Phaethon Poster', 16.5, 'Drawing of the female hacker in her studio');
+       ('Phaethon Poster', 16.5, 'Drawing of the female hacker in her studio'),
+       ('Kiana Kaslana Figurine', 20.5, 'Mascot character made of pvc'),
+       ('Fischl Poster', 18, 'I hear the voice of fate, speaking my name in humble supplication...'),
+       ('Belle plushy', 21, 'She''s a tough nut to crack, but where''s the fun if there''s no challenge?'),
+       ('Diluc Figurine', 13.5, 'Diluc, of Mondstadt. Not interested in idle chit-chat. If you have things you want to get done, let me know.');
 
 --Games--
 INSERT INTO game (title, description)
@@ -24,21 +28,51 @@ VALUES
        ('Kiana Kaslana', ''),
        ('Bronya Zaychik', ''),
        ('Raiden Mei', ''),
+       ('Murata Himeko', ''),
+       ('Fu Hua', ''),
+       ('Griseo', ''),
+       ('Seele Vollerei', ''),
+       ('Mobius', ''),
+       ('Sirin', ''),
+       ('Theresa Apocalypse', ''),
     --GI--
        ('Paimon', ''),
        ('Hu Tao', ''),
        ('Diluc', ''),
+       ('Aether', ''),
+       ('Lumine', ''),
+       ('Furina', ''),
+       ('Keqing', ''),
+       ('Fischl', ''),
+       ('Kirara', ''),
+       ('Ganyu', ''),
     --HSR--
-       ('HuoHuo', ''),
+       ('Caleus', ''),
        ('Sparkle', ''),
+       ('Herta', ''),
+       ('Boothill', ''),
+       ('Acheron', ''),
+       ('Feixiao', ''),
+       ('Firefly', ''),
+       ('Pom Pom', ''),
+       ('Gallagher', ''),
+       ('Stelle', ''),
     --ZZZ--
        ('Caesar King', ''),
-       ('Grace Howard', '');
+       ('Grace Howard', ''),
+       ('Burnice White', ''),
+       ('Nicole', ''),
+       ('Anby', ''),
+       ('Billy', ''),
+       ('Ellen Joe', ''),
+       ('Rina', ''),
+       ('Belle', ''),
+       ('Wise', '');
 
 --Outfits--
 INSERT INTO outfit (name, description)
 VALUES
     --HI3rd--
-       ('Summer Outfit', ''),
-       ('Battle Suit', '');
+        ('White Comet', ''),
+        ('Void Drifter', '');
     --GI--
