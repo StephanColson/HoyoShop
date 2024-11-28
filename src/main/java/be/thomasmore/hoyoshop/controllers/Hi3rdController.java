@@ -14,7 +14,7 @@ public class Hi3rdController {
 
     @GetMapping("/hi3rd")
     public String hi3rd(Model model) {
-        final Iterable<Product> products = productRepository.findAll();
+        final Iterable<Product> products = productRepository.findByGame_Title("Honkai Impact 3rd");
         model.addAttribute("products", products);
         model.addAttribute("activePage", "hi3rd");
         return "hi3rd";

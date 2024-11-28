@@ -14,7 +14,7 @@ public class GiController {
 
     @GetMapping("/gi")
     public String gi(Model model) {
-        final Iterable<Product> products = productRepository.findAll();
+        final Iterable<Product> products = productRepository.findByGame_Title("Genshin Impact");
         model.addAttribute("products", products);
         model.addAttribute("activePage", "gi");
         return "gi";

@@ -14,7 +14,7 @@ public class ZzzController {
 
     @GetMapping("/zzz")
     public String zzz(Model model) {
-        final Iterable<Product> products = productRepository.findAll();
+        final Iterable<Product> products = productRepository.findByGame_Title("Zenless Zone Zero");
         model.addAttribute("products", products);
         model.addAttribute("activePage", "zzz");
         return "zzz";

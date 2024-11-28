@@ -14,7 +14,7 @@ public class HsrController {
 
     @GetMapping("/hsr")
     public String hsr(Model model) {
-        final Iterable<Product> products = productRepository.findAll();
+        final Iterable<Product> products = productRepository.findByGame_Title("Honkai Star Rail");
         model.addAttribute("products", products);
         model.addAttribute("activePage", "hsr");
         return "hsr";
