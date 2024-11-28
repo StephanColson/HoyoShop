@@ -6,6 +6,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <style>
+        .btn:hover{
+            color: #f8f9fa !important;
+        }
+    </style>
     <title>Zenless Zone Zero</title>
 </head>
 <body>
@@ -23,7 +28,7 @@
                         </div>
                         <div class="card-footer text-danger">
                             <p th:text="${product.price} + | Euro|">The price</p>
-                            <a class="btn bg-danger text-light-emphasis">Buy</a>
+                            <a class="btn bg-danger text-light-emphasis hover-text-light">Buy</a>
                             <a class="btn bg-info text-light-emphasis">Details</a>
                         </div>
                     </div>

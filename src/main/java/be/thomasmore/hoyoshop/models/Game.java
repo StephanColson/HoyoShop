@@ -1,9 +1,8 @@
 package be.thomasmore.hoyoshop.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.Collection;
 
 @Entity
 public class Game {
@@ -13,6 +12,10 @@ public class Game {
     private String title;
     private String image;
     private String description;
+
+    @OneToMany(mappedBy = "game")
+    private Collection<Product> product;
+
 
     public Game(Integer id, String title, String description) {
         this.id = id;
@@ -44,5 +47,13 @@ public class Game {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Collection<Product> getProduct() {
+        return product;
+    }
+
+    public void setProduct(Collection<Product> product) {
+        this.product = product;
     }
 }

@@ -1,9 +1,6 @@
 package be.thomasmore.hoyoshop.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Product {
@@ -14,6 +11,9 @@ public class Product {
     private String image;
     private double price;
     private String description;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Game game;
 
     public Product(Integer id, String name, double price, String description) {
         this.id = id;
