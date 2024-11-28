@@ -15,11 +15,12 @@ public class Product {
     @ManyToOne(fetch = FetchType.LAZY)
     private Game game;
 
-    public Product(Integer id, String name, double price, String description) {
+    public Product(Integer id, String name, double price, String description, String image) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
+        this.image = image;
     }
 
     public Product() {}
@@ -54,5 +55,13 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

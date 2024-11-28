@@ -18,10 +18,10 @@
     <h2 class="text-light">Welcome to the express Trailblazer!</h2>
     <div class="container">
         <div class="row">
-            <div th:each="product : ${products}" class="col-lg-4 my-2">
+            <div th:each="product : ${products}" class="col-lg-4 col-md-4 col-6 my-2">
                 <div class="col-lg-12">
                     <div class="card bg-dark-subtle">
-                        <img src="" class="card-img-top">
+                        <img th:src="${product.image}" class="card-img-top img-fluid">
                         <div class="card-body">
                             <h4 class="card-title text-danger" th:text="${product.name}">Name</h4>
                             <p class="card-text text-primary" th:text="${product.description}">Description</p>
