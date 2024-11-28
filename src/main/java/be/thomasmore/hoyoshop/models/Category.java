@@ -1,9 +1,8 @@
 package be.thomasmore.hoyoshop.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.Collection;
 
 @Entity
 public class Category {
@@ -11,8 +10,10 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String type;
-    private String image;
     private String description;
+
+    @OneToMany(mappedBy = "category")
+    private Collection<Product> product;
 
     public Category(Integer id, String type, String description) {
         this.id = id;
@@ -44,5 +45,13 @@ public class Category {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Collection<Product> getProduct() {
+        return product;
+    }
+
+    public void setProduct(Collection<Product> product) {
+        this.product = product;
     }
 }

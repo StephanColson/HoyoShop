@@ -2,6 +2,8 @@ package be.thomasmore.hoyoshop.models;
 
 import jakarta.persistence.*;
 
+import java.util.Collection;
+
 @Entity
 public class Product {
     @Id
@@ -14,6 +16,9 @@ public class Product {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Game game;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Category category;
 
     public Product(Integer id, String name, double price, String description, String image) {
         this.id = id;
