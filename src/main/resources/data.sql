@@ -1,9 +1,9 @@
 --Games--
-INSERT INTO game (title, description)
-VALUES ('Honkai Impact 3rd', 'You are playing as the valkyries'),
-       ('Genshin Impact', 'Playing as the traveller'),
-       ('Honkai Star Rail', 'You are a stellaron and joined the Express'),
-       ('Zenless Zone Zero', 'You are a wanted criminal');
+INSERT INTO game (title, description, image, link)
+VALUES ('Honkai Impact 3rd', 'You are playing as the valkyries', '/images/hi3rd/Honkai Impact 3rd Cover.webp', '/hi3rd'),
+       ('Genshin Impact', 'Playing as the traveller', '/images/gi/Genshin Impact Cover.webp', '/gi'),
+       ('Honkai Star Rail', 'You are a stellaron and joined the Express', '/images/hsr/Honkai Star Rail Cover.jpg', '/hsr'),
+       ('Zenless Zone Zero', 'You are a wanted criminal', '/images/zzz/Zenless Zone Zero Cover.webp', '/zzz');
 
 --Categories--
 INSERT INTO category (type, description)

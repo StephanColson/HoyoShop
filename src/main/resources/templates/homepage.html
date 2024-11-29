@@ -3,10 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <style>
+        .btn:hover{
+            color: #f8f9fa !important;
+        }
+    </style>
     <title>Home</title>
 </head>
 <body>
     <h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
     <h2 class="text-light">Where would you like to shop?</h2>
+
+    <div class="container">
+        <div class="row">
+            <div th:each="game : ${games}" class="col-lg-3 col-md-3 col-4 my-2">
+                <div class="col-lg-12">
+                    <div class="card bg-dark-subtle">
+                        <img th:src="${game.image}" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h4 class="card-title text-danger" th:text="${game.title}">Name</h4>
+                            <p class="card-text text-primary" th:text="${game.description}">Description</p>
+                        </div>
+                        <div class="card-footer text-danger">
+                            <a class="btn bg-info text-light-emphasis">Details</a>
+                            <a class="btn bg-info text-light-emphasis"
+                               th:href="${game.link}">Shop</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
