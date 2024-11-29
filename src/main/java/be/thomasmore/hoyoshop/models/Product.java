@@ -20,6 +20,9 @@ public class Product {
     @ManyToOne(fetch = FetchType.LAZY)
     private Category category;
 
+    @ManyToMany(fetch = FetchType.LAZY)
+    private Collection<Character> characters;
+
     public Product(Integer id, String name, double price, String description, String image) {
         this.id = id;
         this.name = name;
