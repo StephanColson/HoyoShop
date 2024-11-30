@@ -10,6 +10,27 @@
 </head>
 <body>
     <h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
-    <h2>Honkai Star Rail Product Details</h2>
+
+    <div class="container">
+        <div class="row">
+            <div>
+                <img th:src="${product.image}">
+            </div>
+            <div>
+                <h3 th:text="${product.name}">title</h3>
+            </div>
+            <div>
+                <p th:text="${product.description}">description</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div th:each="gameCharacter : ${gameCharacters}">
+                <div>
+                    <a th:text="${gameCharacter.name}" th:href="@{/home}">character list</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
