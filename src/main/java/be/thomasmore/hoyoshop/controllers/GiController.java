@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.Optional;
 
 @Controller
 public class GiController {
@@ -18,5 +21,21 @@ public class GiController {
         model.addAttribute("products", products);
         model.addAttribute("activePage", "gi");
         return "gi";
+    }
+
+    @GetMapping({"/giDetails/{id}", "/giDetails"})
+    public String giDetails(@PathVariable(required = false) Integer id, Model model) {
+        final  Iterable<Product> products = productRepository.findAll();
+        model.addAttribute("products", products);
+
+        if(id == null) {
+            return "giDetails";
+        }
+
+        Optional<Product> productDB = productRepository.findById(id);
+        if(productDB.isPresent()) {
+            model.addAttribute("product", productDB.get());
+        }
+        return "giDetails";
     }
 }

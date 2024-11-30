@@ -29,7 +29,7 @@
                         <div class="card-footer text-danger">
                             <p th:text="${product.price} + | Euro|">The price</p>
                             <a class="btn bg-danger text-light-emphasis hover-text-light">Buy</a>
-                            <a class="btn bg-info text-light-emphasis">Details</a>
+                            <a class="btn bg-info text-light-emphasis" th:href="@{|/zzzDetails/${product.id}|}">Details</a>
                         </div>
                     </div>
                 </div>
