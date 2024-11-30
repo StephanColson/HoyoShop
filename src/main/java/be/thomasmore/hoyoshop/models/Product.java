@@ -21,7 +21,7 @@ public class Product {
     private Category category;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    private Collection<Character> characters;
+    private Collection<GameCharacter> gameCharacters;
 
     public Product(Integer id, String name, double price, String description, String image) {
         this.id = id;
@@ -32,6 +32,14 @@ public class Product {
     }
 
     public Product() {}
+
+    public Collection<GameCharacter> getGameCharacters() {
+        return gameCharacters;
+    }
+
+    public void setGameCharacters(Collection<GameCharacter> characters) {
+        this.gameCharacters = characters;
+    }
 
     public Integer getId() {
         return id;

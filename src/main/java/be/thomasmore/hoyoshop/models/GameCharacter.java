@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Collection;
 
 @Entity
-public class Character {
+public class GameCharacter {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -13,16 +13,16 @@ public class Character {
     private String image;
     private String description;
 
-    @ManyToMany(mappedBy = "characters")
+    @ManyToMany(mappedBy = "gameCharacters")
     private Collection<Product> products;
 
-    public Character(Integer id, String name, String description) {
+    public GameCharacter(Integer id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
     }
 
-    public Character() {}
+    public GameCharacter() {}
 
     public Integer getId() {
         return id;

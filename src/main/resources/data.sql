@@ -13,7 +13,7 @@ VALUES ('Plushies', 'A doll made out of cotton'),
        ('Posters', 'A drawing of someone or a landscape');
 
 --Characters--
-INSERT INTO character (name, description)
+INSERT INTO game_character (name, description)
 VALUES
     --HI3rd--
 /*1*/  ('Kiana Kaslana', ''),
@@ -122,7 +122,7 @@ VALUES
         ('Zenless Zone Zero plushies', 18, 'plushie set', '/images/zzz/zzz plush.jpeg', 4, 1),
         ('Ellen Plush', 16, 'plushie of cotton, attachable tail', '/images/zzz/Ellen Plush.webp', 4, 1);
 
-INSERT INTO PRODUCT_CHARACTERS (PRODUCTS_ID, CHARACTERS_ID)
+INSERT INTO PRODUCT_GAME_CHARACTERS (PRODUCTS_ID, GAME_CHARACTERS_ID)
 VALUES
     --Honkai Impact 3rd--
         (1, 1),

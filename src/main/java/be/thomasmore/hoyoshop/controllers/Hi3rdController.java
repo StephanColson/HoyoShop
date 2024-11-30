@@ -1,5 +1,6 @@
 package be.thomasmore.hoyoshop.controllers;
 
+import be.thomasmore.hoyoshop.models.GameCharacter;
 import be.thomasmore.hoyoshop.models.Product;
 import be.thomasmore.hoyoshop.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -34,7 +37,11 @@ public class Hi3rdController {
 
         Optional<Product> productDB = productRepository.findById(id);
         if(productDB.isPresent()) {
-            model.addAttribute("product", productDB.get());
+            Product product = productDB.get();
+            model.addAttribute("product", product);
+
+            List<GameCharacter> gameCharacters = new ArrayList<>(product.getGameCharacters());
+            model.addAttribute("gameCharacters", gameCharacters);
         }
         return "hi3rdDetails";
     }
