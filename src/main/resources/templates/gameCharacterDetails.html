@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+  <style>
+    .btn:hover{
+      color: #f8f9fa !important;
+    }
+  </style>
+    <title>Game Character</title>
+</head>
+<body>
+  <h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
+
+  <div class="container">
+    <div class="row">
+      <div>
+        <img th:src="${gameCharacter.image}">
+        <h3 th:text="${gameCharacter.name}">Name</h3>
+        <p th:text="${gameCharacter.description}">description</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

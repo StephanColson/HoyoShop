@@ -13,58 +13,179 @@ VALUES ('Plushies', 'A doll made out of cotton'),
        ('Posters', 'A drawing of someone or a landscape');
 
 --Characters--
-INSERT INTO game_character (name, description)
+INSERT INTO game_character (name, description, image)
 VALUES
     --HI3rd--
-/*1*/  ('Kiana Kaslana', ''),
-/*2*/  ('Bronya Zaychik', ''),
-/*3*/  ('Raiden Mei', ''),
-/*4*/  ('Elysia', ''),
-/*5*/  ('Senti', ''),
-/*6*/  ('Griseo', ''),
-/*7*/  ('Vii', ''),
-/*8*/  ('Mobius', ''),
-/*9*/  ('Fu Hua', ''),
-/*10*/ ('Aponia', ''),
-/*11*/ ('Yae Sakura', ''),
-/*12*/ ('Eden', ''),
-/*13*/ ('Kosma', ''),
+/*1*/  ('Kiana Kaslana',
+        'Kiana Kaslana, or K423, was at first a very boastful, overconfident and "idiotic" girl ' ||
+        'who took a great liking to food. She was happy-go-lucky, and confident she could do anything she ' ||
+        'set her mind to. She often smiled, even if she was injured, and adored the company of her friends, ' ||
+        'whom she showed great affection to. Her happy-go-lucky attitude and her overconfidence ' ||
+        'often caused her to make reckless decisions without a second thought, ' ||
+        'especially if it was to save others, even if it meant sacrificing herself.',
+        '/images/hi3rd/imgChars/Kiana Kaslana.webp'),
+
+/*2*/  ('Bronya Zaychik',
+        'Bronya is emotionally stunted as a result of Project X-10, ' ||
+        'speaking in a deadpan tone with a matching expression. ' ||
+        'Bronya rarely shows empathy or acts in accordance with others. ' ||
+        'Despite this, she adores both the HOMU franchise and Seele, and sympathises with Wendy. ' ||
+        'When she became the Herrscher of Reason, the Core of Reason repaired both her legs and brain, ' ||
+        'allowing her to walk and feel the emotions she had lost. She has a grown-up personality, ' ||
+        'and a very logical way of thinking, although she has trouble understanding concepts based on intuition, ' ||
+        'which is what Kiana often acts upon.',
+        '/images/hi3rd/imgChars/Bronya Zaychik.webp'),
+
+/*3*/  ('Raiden Mei',
+        'Mei is someone with a long history of neglecting her own feelings. ' ||
+        'Even before her father was arrested, she was used to silently accepting her loneliness within the home. ' ||
+        'When she went from being the center of attention at school to a "criminal", though, she grew more jaded. ' ||
+        'She still had a soft heart, but often put her guard up when people approached. ' ||
+        'This applied even to Kiana Kaslana.' ||
+        'It was only after Kiana innocently bombarded her with requests for food ' ||
+        '(despite her lack of skill at the time) that she began to soften again. ' ||
+        'This would be the start of her love for cooking.',
+        '/images/hi3rd/imgChars/Raiden Mei.webp'),
+
+/*4*/  ('Elysia',
+        'Elysia is an elegant, cheerful, and sweet lady who''s described as someone who "enjoys everything". ' ||
+        'She likes to flatter Mei for her looks and constantly praises Eden''s beauty. ' ||
+        'Elysia enjoys interacting with people and is very good at it.',
+        '/images/hi3rd/imgChars/Elysia.webp'),
+
+/*5*/  ('Senti',
+        'Unlike Fu Hua, the Herrscher of Sentience is a much more lively and free-spirited character. ' ||
+        'Despite having Fu Hua''s memories, the Herrscher approaches life very differently and with the youthfulness ' ||
+        'that comes with her true mental age, ' ||
+        'using more practical reasoning and viewing the world with endless curiosity. ' ||
+        'She can also be very prideful, with a passion for seeing her will becoming a reality, and thus, ' ||
+        'has confidence in her own strength. However, after having her identity shaken, ' ||
+        'the Herrscher of Sentience''s pride made her rather sulking and stubborn, ' ||
+        'though at the same time, weary, as she struggles internally to console her existence with what she "knew" was ' ||
+        'right and wrong from Fu Hua''s memories.', '/images/hi3rd/imgChars/Herrscher_of_Sentience.webp'),
+
+/*6*/  ('Griseo', '',
+        '/images/hi3rd/imgChars/Griseo.webp'),
+
+/*7*/  ('Vill-V', '',
+        '/images/hi3rd/imgChars/Vill-V.webp'),
+
+/*8*/  ('Mobius', '',
+        '/images/hi3rd/imgChars/Mobius.webp'),
+
+/*9*/  ('Fu Hua', '',
+        '/images/hi3rd/imgChars/Fu Hua.webp'),
+
+/*10*/ ('Aponia', '',
+        '/images/hi3rd/imgChars/Aponia.webp'),
+
+/*11*/ ('Yae Sakura', '',
+        '/images/hi3rd/imgChars/Yae Sakura.webp'),
+
+/*12*/ ('Eden', '',
+        '/images/hi3rd/imgChars/Eden.webp'),
+
+/*13*/ ('Kosma', '',
+        '/images/hi3rd/imgChars/Kosma.webp'),
     --GI--
-/*14*/ ('Arlecchino', ''),
-/*15*/ ('Hu Tao', ''),
-/*16*/ ('Diluc', ''),
-/*17*/ ('Furina', ''),
-/*18*/ ('Raiden Ei', ''),
-/*19*/ ('Zhongli', ''),
-/*20*/ ('Venti', ''),
-/*21*/ ('Fischl', ''),
-/*22*/ ('Kazuha', ''),
+/*14*/ ('Arlecchino', '',
+        '/images/gi/imgChars/Arlecchino.webp'),
+
+/*15*/ ('Hu Tao', '',
+        '/images/gi/imgChars/Hu Tao.webp'),
+
+/*16*/ ('Diluc', '',
+        '/images/gi/imgChars/Diluc.webp'),
+
+/*17*/ ('Furina', '',
+        '/images/gi/imgChars/Furina.webp'),
+
+/*18*/ ('Raiden Ei', '',
+        '/images/gi/imgChars/Raiden Shogun.webp'),
+
+/*19*/ ('Zhongli', '',
+        '/images/gi/imgChars/Zhongli.webp'),
+
+/*20*/ ('Venti', '',
+        '/images/gi/imgChars/Venti.webp'),
+
+/*21*/ ('Fischl', '',
+        '/images/gi/imgChars/Fischl.webp'),
+
+/*22*/ ('Kazuha', '',
+        '/images/gi/imgChars/Kazuha.webp'),
     --HSR--
-/*23*/ ('Kafka', ''),
-/*24*/ ('Blade', ''),
-/*25*/ ('Jingliu', ''),
-/*26*/ ('Jing Yuan', ''),
-/*27*/ ('Feixiao', ''),
-/*28*/ ('Firefly', ''),
-/*29*/ ('Herta', ''),
-/*30*/ ('HuoHuo', ''),
-/*31*/ ('Dan Heng', ''),
-/*32*/ ('Bailu', ''),
-/*33*/ ('Luocha', ''),
-/*34*/ ('Yun Li', ''),
+/*23*/ ('Kafka', '',
+        '/images/hsr/imgChars/Kafka.webp'),
+
+/*24*/ ('Blade', '',
+        '/images/hsr/imgChars/Blade.webp'),
+
+/*25*/ ('Jingliu', '',
+        '/images/hsr/imgChars/Jingliu.webp'),
+
+/*26*/ ('Jing Yuan', '',
+        '/images/hsr/imgChars/Jing Yuan.webp'),
+
+/*27*/ ('Feixiao', '',
+        '/images/hsr/imgChars/Feixiao.webp'),
+
+/*28*/ ('Firefly', '',
+        '/images/hsr/imgChars/Firefly.web'),
+
+/*29*/ ('Herta', '',
+        '/images/hsr/imgChars/Herta.webp'),
+
+/*30*/ ('HuoHuo', '',
+        '/images/hsr/imgChars/HuoHuo.webp'),
+
+/*31*/ ('Dan Heng', '',
+        '/images/hsr/imgChars/Dan Heng.webp'),
+
+/*32*/ ('Bailu', '',
+        '/images/hsr/imgChars/Bailu.webp'),
+
+/*33*/ ('Luocha', '',
+        '/images/hsr/imgChars/Luocha.webp'),
+
+/*34*/ ('Yunli', '',
+        '/images/hsr/imgChars/Yunli.webp'),
     --ZZZ--
-/*35*/ ('Koleda Belabog', ''),
-/*36*/ ('Grace Howard', ''),
-/*37*/ ('Anton Ivanov', ''),
-/*38*/ ('Ben Biggers', ''),
-/*39*/ ('Nicole Demara', ''),
-/*40*/ ('Anby Demara', ''),
-/*41*/ ('Ellen Joe', ''),
-/*42*/ ('Rina', ''),
-/*43*/ ('Corin Wickes', ''),
-/*44*/ ('Zhu Yuan', ''),
-/*45*/ ('Belle', ''),
-/*46*/ ('Wise', '');
+/*35*/ ('Koleda Belabog', '',
+        '/images/zzz/imgChars/Koleda Belobog.webp'),
+
+/*36*/ ('Grace Howard', '',
+        '/images/zzz/imgChars/Grace Howard.webp'),
+
+/*37*/ ('Anton Ivanov', '',
+        '/images/zzz/imgChars/Anton Ivanov.webp'),
+
+/*38*/ ('Ben Biggers', '',
+        '/images/zzz/imgChars/Ben Biggers.webp'),
+
+/*39*/ ('Nicole Demara', '',
+        '/images/zzz/imgChars/Nicole Demara.webp'),
+
+/*40*/ ('Anby Demara', '',
+        '/images/zzz/imgChars/Anby Demara.webp'),
+
+/*41*/ ('Ellen Joe', '',
+        '/images/zzz/imgChars/Ellen Joe.webp'),
+
+/*42*/ ('Rina', '',
+        '/images/zzz/imgChars/Rina.webp'),
+
+/*43*/ ('Corin Wickes', '',
+        '/images/zzz/imgChars/Corin Wickes.webp'),
+
+/*44*/ ('Zhu Yuan', '',
+        '/images/zzz/imgChars/Zhu Yuan.webp'),
+
+/*45*/ ('Belle', '',
+        '/images/zzz/imgChars/Belle.webp'),
+
+/*46*/ ('Wise', '',
+        '/images/zzz/imgChars/Wise.webp');
 
 --Outfits--
 INSERT INTO outfit (name, description)

@@ -11,15 +11,17 @@ public class GameCharacter {
     private Integer id;
     private String name;
     private String image;
+    @Column(length = 10000)
     private String description;
 
     @ManyToMany(mappedBy = "gameCharacters")
     private Collection<Product> products;
 
-    public GameCharacter(Integer id, String name, String description) {
+    public GameCharacter(Integer id, String name, String description, String image) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.image = image;
     }
 
     public GameCharacter() {}
@@ -46,6 +48,14 @@ public class GameCharacter {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public Collection<Product> getProducts() {

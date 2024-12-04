@@ -27,7 +27,7 @@
         <div class="row">
             <div th:each="gameCharacter : ${gameCharacters}">
                 <div>
-                    <a th:text="${gameCharacter.name}" th:href="@{/home}">character list</a>
+                    <a th:text="${gameCharacter.name}" th:href="@{|/gameCharacter/${gameCharacter.id}|}">character list</a>
                 </div>
             </div>
         </div>
