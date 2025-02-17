@@ -1,16 +1,37 @@
 --Games--
 INSERT INTO game (title, description, image, link)
-VALUES ('Honkai Impact 3rd', 'You are playing as the valkyries', '/images/hi3rd/Honkai Impact 3rd Cover.webp', '/hi3rd'),
-       ('Genshin Impact', 'Playing as the traveller', '/images/gi/Genshin Impact Cover.webp', '/gi'),
-       ('Honkai Star Rail', 'You are a stellaron and joined the Express', '/images/hsr/Honkai Star Rail Cover.jpg', '/hsr'),
-       ('Zenless Zone Zero', 'You are a wanted criminal', '/images/zzz/Zenless Zone Zero Cover.webp', '/zzz');
+VALUES ('Honkai Impact 3rd',
+        'A fast-paced action RPG with anime-style visuals, ' ||
+        'focused on intense combat mechanics and a deep storyline about the battle against the "Honkai," ' ||
+        'an alien force threatening humanity. Players control a team of "Valkyries," each with unique abilities, ' ||
+        'as they unravel a mix of tragedy, sacrifice, and hope.',
+        '/images/hi3rd/Honkai Impact 3rd Cover.webp', '/hi3rd'),
+
+       ('Genshin Impact',
+        'An open-world action RPG that blends exploration, elemental combat, ' ||
+        'and a gacha system. Set in the vibrant world of Teyvat, players embark on a journey to reunite with ' ||
+        'their lost sibling while uncovering the secrets of the Seven Archons and engaging in dynamic quests.',
+        '/images/gi/Genshin Impact Cover.webp', '/gi'),
+
+       ('Honkai Star Rail',
+        'A turn-based RPG with a focus on strategic combat and storytelling. ' ||
+        'Players explore a sci-fi universe aboard the Astral Express, ' ||
+        'battling interstellar threats and uncovering mysteries about the mythical "Stellaron" alongside ' ||
+        'a diverse cast of characters.',
+        '/images/hsr/Honkai Star Rail Cover.jpg', '/hsr'),
+
+       ('Zenless Zone Zero',
+        'An urban fantasy action RPG with a roguelike twist. ' ||
+        'Set in a post-apocalyptic city plagued by mysterious Hollows, players take on missions as "Proxies," ' ||
+        'combining stylish real-time combat with narrative-driven exploration of a gritty, high-tech world.',
+        '/images/zzz/Zenless Zone Zero Cover.webp', '/zzz');
 
 --Categories--
-INSERT INTO category (type, description)
-VALUES ('Plushies', 'A doll made out of cotton'),
-       ('Figurines', 'Mainly made with pvc'),
-       ('Key-Chains', 'Mainly made of arcylic plastic'),
-       ('Posters', 'A drawing of someone or a landscape');
+INSERT INTO category (type)
+VALUES ('Plushies'),
+       ('Figurines'),
+       ('Key-Chains'),
+       ('Posters');
 
 --Characters--
 INSERT INTO game_character (name, description, image)
@@ -62,7 +83,8 @@ VALUES
         'has confidence in her own strength. However, after having her identity shaken, ' ||
         'the Herrscher of Sentience''s pride made her rather sulking and stubborn, ' ||
         'though at the same time, weary, as she struggles internally to console her existence with what she "knew" was ' ||
-        'right and wrong from Fu Hua''s memories.', '/images/hi3rd/imgChars/Herrscher_of_Sentience.webp'),
+        'right and wrong from Fu Hua''s memories.',
+        '/images/hi3rd/imgChars/Herrscher_of_Sentience.webp'),
 
 /*6*/  ('Griseo', '',
         '/images/hi3rd/imgChars/Griseo.webp'),
@@ -188,12 +210,157 @@ VALUES
         '/images/zzz/imgChars/Wise.webp');
 
 --Outfits--
-INSERT INTO outfit (name, description)
+INSERT INTO outfit (name, GAME_CHARACTER_ID)
 VALUES
     --HI3rd--
-        ('White Comet', ''),
-        ('Void Drifter', '');
+        --Kiana Kaslana--
+        ('White Comet', 1),
+        ('Starless Rift', 1),
+        ('Sunny Beach', 1),
+        ('Prodigal Girl', 1),
+        ('Valkyrie Ranger', 1),
+        ('Ocean Ranger', 1),
+        ('Honkai World Diva', 1),
+        ('Void Drifter', 1),
+        ('Red Lictor', 1),
+        ('Peak Sync PS', 1),
+        ('Radiant Blaze', 1),
+        ('Divine Prayer', 1),
+        ('Lavender Love', 1),
+        ('Winter Princess', 1),
+        ('Frostmoon Bunny', 1),
+        ('Sea & Breeze', 1),
+        ('Knight Moonbeam', 1),
+        ('Dark Devourer', 1),
+        ('Lemon Soda', 1),
+        ('Bastet''s Secret', 1),
+        ('Herrscher of the Void', 1),
+        ('Frigid Empress', 1),
+        ('Parasol Kaiserin', 1),
+        ('Magic Girl Sirin', 1),
+        ('Herrscher of Flamescoin', 1),
+        ('Time Runner', 1),
+        ('Flowering Luminance', 1),
+        ('Born in Flames', 1),
+        ('Herrscher of Finality', 1),
+        ('Selenic Ripples', 1),
+
+        --Bronya zaychik--
+        ('Valkyrie Chariot', 2),
+        ('School Swimsuit', 2),
+        ('Blue Sky', 2),
+        ('Blue Reunion', 2),
+        ('Snowy Sniper', 2),
+        ('Carrot and Beet Soup', 2),
+        ('Nightfall Witch', 2),
+        ('Yamabuki Armor', 2),
+        ('Candy Demon', 2),
+        ('Helena''s Wings', 2),
+        ('Drive Kometa', 2),
+        ('Wolf''s Dawn', 2),
+        ('Midnight Bluess', 2),
+        ('Mercurial Hatter', 2),
+        ('Dimension Breaker', 2),
+        ('White Devil', 2),
+        ('Techno Beats', 2),
+        ('Black Nucleus', 2),
+        ('Fleurs Du Mal', 2),
+        ('Herrscher of Reason', 2),
+        ('Bestial Afterburn', 2),
+        ('Ultraviolet Kinetik', 2),
+        ('Magic Girl Bronya', 2),
+        ('Haxxor Bunny', 2),
+        ('Old Times', 2),
+        ('White ARC', 2),
+        ('Arc City Blues', 2),
+        ('Silverwing: N-EX', 2),
+        ('Heart of the Night', 2),
+        ('Neonized', 2),
+        ('Outstanding Attitude', 2),
+        ('Herrscher of Truth', 2),
+        ('Seaside Vibes', 2),
+
+        --Raiden Mei--
+        ('Crimson Impulse', 3),
+        ('Azure', 3),
+        ('Vast Ocean', 3),
+        ('Gardenia', 3),
+        ('Valkyrie Bladestrike', 3),
+        ('Blue Memories', 3),
+        ('Aeterna Purum', 3),
+        ('Striker Fulminata', 3),
+        ('Thunderbolt Drive', 3),
+        ('Shadow Dash', 3),
+        ('Soul Symphoney', 3),
+        ('Hind of Noel', 3),
+        ('Danzai Spectramancer', 3),
+        ('Orochi Cuirass', 3),
+        ('Lightning Empress', 3),
+        ('Scorching Golden Thunder', 3),
+        ('Aqua Chime', 3),
+        ('Ultramarine Octave', 3),
+        ('Eventide Phantom', 3),
+        ('Herrscher of Thunder', 3),
+        ('Aqueous Springtide', 3),
+        ('Rainy Springtide', 3),
+        ('Haunted Dusk', 3),
+        ('Nocturne Ablaze', 3),
+        ('Herrscher of Origin', 3),
+        ('Crooning Tides', 3),
+
+        --Elysia--
+        ('Miss Pink Elf♪', 4),
+        ('Miss Pink♪', 4),
+        ('Summer Miss Elf♪', 4),
+        ('Faded Miss Elf♬', 4),
+        ('Herrscher of Ego', 4),
+        ('Peachy Spring', 4),
+
+        --Herrscher of Sentience (Senti)--
+        ('Herrscher of Sentience', 5),
+        ('Ooh! Summer!', 5),
+        ('Turn Up the Music!', 5),
+
+        --Griseo--
+        ('Starry Impression', 6),
+        ('Summer as a Painting', 6),
+        ('Maroon Riding Hood', 6),
+        ('Everdream', 6),
+        ('Cosmic Expression', 6),
+        ('Gokudo Brushstrokes', 6),
+
+        --Vill-V--
+        ('Helical Contraption', 7),
+        ('I''m the Storm', 7),
+
+        --Mobius--
+        ('Infinite Ouroboros', 8),
+        ('Daughter of Corals', 8),
+        ('Scorching Gravel', 8),
+
+        --Fu Hua--
+        ('Valkyrie Accipiter', 9),
+        ('Blue Swallow', 9),
+        ('Hawk of the Fog', 9),
+        ('Hawk of the Yard', 9),
+        ('Onyx Simurgh', 9),
+        ('Phoenix', 9),
+
+        --Aponia--
+        ('Disciplinary Perdition', 10),
+
+        --Kosma--
+        ('None', 13),
+
     --GI--
+        --Diluc--
+        ('Darknight Blaze', 16),
+        ('Red Dead of Night', 16),
+
+    --HSR--
+
+    --ZZZ--
+        ('Currently none', 35);
 
 --Product--
 INSERT INTO product (name, price, description, image, GAME_ID, CATEGORY_ID)
@@ -209,6 +376,7 @@ VALUES
         ('Plush set', 30, 'Made with cotton', '/images/hi3rd/Plush set.jpg', 1, 1),
         ('Raiden Mei Figurine', 16, 'Made with pvc', '/images/hi3rd/Raiden Mei Figurine.jpg', 1, 2),
         ('Raiden Mei Poster', 14, 'Poster made out of paper', '/images/hi3rd/Raiden Mei Poster.jpg', 1, 4),
+
     --Genshin Impact--
         ('Archons Poster', 20, '1 poster of 3 archons together', '/images/gi/Archons Poster.webp', 2, 4),
         ('Arlecchino Figurine.webp', 25, 'made with pvc', '/images/gi/Arlecchino Figurine.webp', 2, 2),
@@ -220,6 +388,7 @@ VALUES
         ('Furina Plush', 13, 'cotton doll', '/images/gi/Furina Plush.jpg', 2, 1),
         ('Hu Tao Figurine', 22, 'pvc figurine', '/images/gi/Hu Tao Figurine.webp', 2, 2),
         ('Kazuha Poster', 14.5, 'paper poster', '/images/gi/Kazuha Poster.jpg', 2, 4),
+
     --Honkai Star Rail--
         ('Honkai Star Rail plush set', 20, 'Cotton Plush set', '/images/hsr/4 plush set.webp', 3, 1),
         ('Feixiao Figurine', 27, 'pvc figurine', '/images/hsr/Feixiao Figurine.webp', 3, 2),
@@ -231,6 +400,7 @@ VALUES
         ('HuoHuo plush', 12, 'made with cotton', '/images/hsr/HuoHuo plush.jpg', 3, 1),
         ('Honkai Star Rail plush set', 24, 'cotton plushies', '/images/hsr/Star Rail plush set.jpg', 3, 1),
         ('Yunli Poster', 14.5, 'paper poster', '/images/hsr/Yunli Poster.jpg', 3, 4),
+
     --Zenless Zone Zero--
         ('Sibling Poster' , 10, 'paper poster', '/images/zzz/Wise Belle.webp', 4, 4),
         ('Anby Figurine', 21, 'pvc doll', '/images/zzz/Anby Figurine.webp', 4, 2),
@@ -269,6 +439,7 @@ VALUES
         (8, 13),
         (9, 3),
         (10, 3),
+
     --Genshin Impact--
         (11, 18),
         (11, 19),
@@ -282,6 +453,7 @@ VALUES
         (18, 17),
         (19, 15),
         (20, 22),
+
     --Honkai Star Rail--
         (21, 23),
         (21, 24),
@@ -302,6 +474,7 @@ VALUES
         (29, 29),
         (29, 23),
         (30, 34),
+
     --Zenless Zone Zero--
         (31, 45),
         (31, 46),
@@ -328,3 +501,5 @@ VALUES
         (39, 43),
         (39, 44),
         (40, 41);
+
+-- Many to Many between Products and Outfits --

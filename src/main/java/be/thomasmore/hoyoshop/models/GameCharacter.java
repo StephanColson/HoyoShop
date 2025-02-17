@@ -17,6 +17,9 @@ public class GameCharacter {
     @ManyToMany(mappedBy = "gameCharacters")
     private Collection<Product> products;
 
+    @OneToMany(mappedBy = "gameCharacter")
+    private Collection<Outfit> outfit;
+
     public GameCharacter(Integer id, String name, String description, String image) {
         this.id = id;
         this.name = name;
@@ -64,5 +67,13 @@ public class GameCharacter {
 
     public void setProducts(Collection<Product> products) {
         this.products = products;
+    }
+
+    public Collection<Outfit> getOutfit() {
+        return outfit;
+    }
+
+    public void setOutfit(Collection<Outfit> outfit) {
+        this.outfit = outfit;
     }
 }

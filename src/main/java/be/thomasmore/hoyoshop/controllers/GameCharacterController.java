@@ -1,6 +1,7 @@
 package be.thomasmore.hoyoshop.controllers;
 
 import be.thomasmore.hoyoshop.models.GameCharacter;
+import be.thomasmore.hoyoshop.models.Outfit;
 import be.thomasmore.hoyoshop.repositories.GameCharacterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -28,6 +31,9 @@ public class GameCharacterController {
         if(gameCharacterDB.isPresent()) {
             GameCharacter gameCharacter = gameCharacterDB.get();
             model.addAttribute("gameCharacter", gameCharacter);
+
+            List<Outfit> outfits = new ArrayList<>(gameCharacter.getOutfit());
+            model.addAttribute("outfits", outfits);
         }
         return "gameCharacterDetails";
     }

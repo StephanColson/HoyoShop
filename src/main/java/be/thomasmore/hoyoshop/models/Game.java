@@ -11,6 +11,7 @@ public class Game {
     private Integer id;
     private String title;
     private String image;
+    @Column(length = 10000)
     private String description;
     private String link;
 

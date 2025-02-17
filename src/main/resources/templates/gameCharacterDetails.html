@@ -16,9 +16,18 @@
   <div class="container">
     <div class="row">
       <div>
-        <img th:src="${gameCharacter.image}">
-        <h3 th:text="${gameCharacter.name}">Name</h3>
+        <img th:src="${gameCharacter.image}" class="img-fluid">
+        <h3 th:text="${gameCharacter.name}" class="mt-3">Name</h3>
         <p th:text="${gameCharacter.description}">description</p>
+
+        <div class="row">
+          <h4 class="mt-3">Outfits</h4>
+          <div th:each="outfit : ${outfits}" class="col-lg-4 col-6">
+            <div>
+              <p th:text="${outfit.name}"></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
