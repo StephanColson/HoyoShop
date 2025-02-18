@@ -42,175 +42,317 @@ INSERT INTO game_character (name, description, image)
 VALUES
     --HI3rd--
 /*1*/  ('Kiana Kaslana',
-        'Kiana Kaslana, or K423, was at first a very boastful, overconfident and "idiotic" girl ' ||
-        'who took a great liking to food. She was happy-go-lucky, and confident she could do anything she ' ||
-        'set her mind to. She often smiled, even if she was injured, and adored the company of her friends, ' ||
-        'whom she showed great affection to. Her happy-go-lucky attitude and her overconfidence ' ||
-        'often caused her to make reckless decisions without a second thought, ' ||
-        'especially if it was to save others, even if it meant sacrificing herself.',
+        'Kiana Kaslana (K-423) is one of the main protagonists of Honkai Impact 3rd ' ||
+        'along with Raiden Mei and Bronya Zaychik. She is the adoptive daughter of Siegfried Kaslana, ' ||
+        'alongside being a vessel for the 2nd Herrscher — Herrscher of the Void. After the events of Chapter 25, ' ||
+        'she awakens as the Herrscher of Flamescion. Ultimately after the events of Chapter 35, ' ||
+        'her will was approved by the Cocoon of Finality, ' ||
+        'granting her its power and allowing her to awaken as the one and only true Herrscher of the End.',
         '/images/hi3rd/imgChars/Kiana Kaslana.webp'),
 
 /*2*/  ('Bronya Zaychik',
-        'Bronya is emotionally stunted as a result of Project X-10, ' ||
-        'speaking in a deadpan tone with a matching expression. ' ||
-        'Bronya rarely shows empathy or acts in accordance with others. ' ||
-        'Despite this, she adores both the HOMU franchise and Seele, and sympathises with Wendy. ' ||
-        'When she became the Herrscher of Reason, the Core of Reason repaired both her legs and brain, ' ||
-        'allowing her to walk and feel the emotions she had lost. She has a grown-up personality, ' ||
-        'and a very logical way of thinking, although she has trouble understanding concepts based on intuition, ' ||
-        'which is what Kiana often acts upon.',
+        'Bronya Zaychik (full name Bronya Alexeievna Zaychik) is a protagonist of the series ' ||
+        'along with Kiana Kaslana and Raiden Mei. ' ||
+        'She is a member of the St. Freya team and a former Valkyrie of Schicksal Squad V. ' ||
+        'She is also Welt Yang''s successor as the Herrscher of Reason.',
         '/images/hi3rd/imgChars/Bronya Zaychik.webp'),
 
 /*3*/  ('Raiden Mei',
-        'Mei is someone with a long history of neglecting her own feelings. ' ||
-        'Even before her father was arrested, she was used to silently accepting her loneliness within the home. ' ||
-        'When she went from being the center of attention at school to a "criminal", though, she grew more jaded. ' ||
-        'She still had a soft heart, but often put her guard up when people approached. ' ||
-        'This applied even to Kiana Kaslana.' ||
-        'It was only after Kiana innocently bombarded her with requests for food ' ||
-        '(despite her lack of skill at the time) that she began to soften again. ' ||
-        'This would be the start of her love for cooking.',
+        'Raiden Mei is a protagonist of Honkai Impact 3rd along with Kiana Kaslana and Bronya Zaychik. ' ||
+        'She is the natural 3rd Herrscher of the Current Era and a member of the St. Freya team.',
         '/images/hi3rd/imgChars/Raiden Mei.webp'),
 
 /*4*/  ('Elysia',
-        'Elysia is an elegant, cheerful, and sweet lady who''s described as someone who "enjoys everything". ' ||
-        'She likes to flatter Mei for her looks and constantly praises Eden''s beauty. ' ||
-        'Elysia enjoys interacting with people and is very good at it.',
+        'Elysia is the co-leader of The Thirteen Flame-Chasers. She is ranked second amongst the thirteen. ' ||
+        'Her codename is "Ego". ' ||
+        'An avatar of her memory appears after Chapter 25 and acts as Raiden Mei''s guide around the Elysian Realm.',
         '/images/hi3rd/imgChars/Elysia.webp'),
 
 /*5*/  ('Senti',
-        'Unlike Fu Hua, the Herrscher of Sentience is a much more lively and free-spirited character. ' ||
-        'Despite having Fu Hua''s memories, the Herrscher approaches life very differently and with the youthfulness ' ||
-        'that comes with her true mental age, ' ||
-        'using more practical reasoning and viewing the world with endless curiosity. ' ||
-        'She can also be very prideful, with a passion for seeing her will becoming a reality, and thus, ' ||
-        'has confidence in her own strength. However, after having her identity shaken, ' ||
-        'the Herrscher of Sentience''s pride made her rather sulking and stubborn, ' ||
-        'though at the same time, weary, as she struggles internally to console her existence with what she "knew" was ' ||
-        'right and wrong from Fu Hua''s memories.',
+        'The Herrscher of Sentience, simply referred to as Hua(?), ' ||
+        'is the protagonist in Chapter 21 of the game. As her name suggests, she is the Eighth Herrscher. ' ||
+        'She is called Dark Fu Hua or just Dark Hua to distinguish her from the original Fu Hua, ' ||
+        'who is a completely different person.',
         '/images/hi3rd/imgChars/Herrscher_of_Sentience.webp'),
 
-/*6*/  ('Griseo', '',
+/*6*/  ('Griseo',
+        'Griseo is a member of The Thirteen Flame-Chasers. ' ||
+        'She is ranked eleventh, with the codename "Stars". ' ||
+        'Her mother and father were Fire Moth employees, which resulted in her hanging out with the Flame-Chasers ' ||
+        'even before her MANTIS surgery.',
         '/images/hi3rd/imgChars/Griseo.webp'),
 
-/*7*/  ('Vill-V', '',
+/*7*/  ('Vill-V',
+        'Vill-V is a member of Fire Moth and the owner of Helixcraft. ' ||
+        'She is ranked 5th among the Thirteen Flame-Chasers, her codename being "Helix".',
         '/images/hi3rd/imgChars/Vill-V.webp'),
 
-/*8*/  ('Mobius', '',
+/*8*/  ('Mobius',
+        'Mobius is a MANTIS and a scientist of the Previous Era, ' ||
+        'being behind the creation of the stigmata, MANTISes and other projects. ' ||
+        'Among The Thirteen Flame-Chasers, she is numbered tenth with the codename "Infinity".',
         '/images/hi3rd/imgChars/Mobius.webp'),
 
-/*9*/  ('Fu Hua', '',
+/*9*/  ('Fu Hua',
+        'Fu Hua is a secondary character in Honkai Impact 3rd. ' ||
+        'She is a MANTIS, and ranked 12th in the Thirteen Flame-Chasers. She is codenamed "Vicissitude". ' ||
+        'She is The Celestial and the Class President of one of St. Freya Academy''s classes. ' ||
+        'She was also the leader of Project EMBER.',
         '/images/hi3rd/imgChars/Fu Hua.webp'),
 
-/*10*/ ('Aponia', '',
+/*10*/ ('Aponia',
+        'Aponia is a member of Fire Moth and a psychic MANTIS. ' ||
+        'She is ranked 3rd among the Thirteen Flame-Chasers, her codename being "Discipline".',
         '/images/hi3rd/imgChars/Aponia.webp'),
 
-/*11*/ ('Yae Sakura', '',
+/*11*/ ('Yae Sakura',
+        'Yae Sakura was the eldest daughter of Yae Village''s chief, and eventually the head shrine priestess. ' ||
+        'She was also a Pseudo-Herrscher.',
         '/images/hi3rd/imgChars/Yae Sakura.webp'),
 
-/*12*/ ('Eden', '',
+/*12*/ ('Eden',
+        'Eden is another member of The Thirteen Flame-Chasers. She is ranked fourth amongst the thirteen, ' ||
+        'and was once "the brightest star" of the Previous Era. Her codename is "Gold."',
         '/images/hi3rd/imgChars/Eden.webp'),
 
-/*13*/ ('Kosma', '',
+/*13*/ ('Kosma',
+        'Kosma is a member of The Thirteen Flame-Chasers. He is ranked ninth, with the codename "Daybreak".',
         '/images/hi3rd/imgChars/Kosma.webp'),
+
     --GI--
-/*14*/ ('Arlecchino', '',
+/*14*/ ('Arlecchino',
+        'Arlecchino, also known by her codename "The Knave," is a playable Pyro character in Genshin Impact. ' ||
+        'She is the Fourth of the Eleven Fatui Harbingers and the current head of the House of the Hearth. ' ||
+        'She is addressed as "Father" by members of the House, who she calls her "children."',
         '/images/gi/imgChars/Arlecchino.webp'),
 
-/*15*/ ('Hu Tao', '',
+/*15*/ ('Hu Tao',
+        'Hu Tao is a playable Pyro character in Genshin Impact. ' ||
+        'Hu Tao''s antics and eccentricity belies her role as the 77th Director of the Wangsheng Funeral Parlor ' ||
+        'and her talent as a poet. Nevertheless, she treats the parlor''s operations with utmost importance, ' ||
+        'and holds funeral ceremonies with the highest dignity and solemnity.',
         '/images/gi/imgChars/Hu Tao.webp'),
 
-/*16*/ ('Diluc', '',
+/*16*/ ('Diluc',
+        'Diluc Ragnvindr is a playable Pyro character in Genshin Impact. ' ||
+        'Born into the affluent Ragnvindr Clan, Diluc is the current owner of the Dawn Winery ' ||
+        'and a nobleman of high esteem in Mondstadt. ' ||
+        'While a past incident caused him to split ways with the Knights of Favonius, ' ||
+        'he continues to protect Mondstadt in his own way.',
         '/images/gi/imgChars/Diluc.webp'),
 
-/*17*/ ('Furina', '',
+/*17*/ ('Furina',
+        'Furina de Fontaine is a playable Hydro character in Genshin Impact ' ||
+        'who can alternate between Pneuma and Ousia alignments. Introduced as the flamboyant and overconfident Hydro Archon,' ||
+        'Furina''s theatrics are eventually revealed to be a public persona, ' ||
+        'which she later discards in favor of living a relatively humbler life as an actress and artistic consultant.',
         '/images/gi/imgChars/Furina.webp'),
 
-/*18*/ ('Raiden Ei', '',
+/*18*/ ('Raiden Ei',
+        'Raiden Ei also known by her Goetic name Beelzebul and as the Raiden Shogun, ' ||
+        'is the God of Eternity and the current Electro Archon presiding over Inazuma. ' ||
+        'She assumed the Shogunate after the previous Electro Archon, her older twin sister Makoto, died in the cataclysm. ' ||
+        'Fearing erosion, she abandoned her body and transferred her consciousness into the Musou Isshin,' ||
+        'which is now stored in the Shogun puppet. ' ||
+        'Following the events of Imperatrix Umbrosa Chapter: Act II - Transient Dreams, ' ||
+        'she works to further Inazuma with a more forward-thinking governance.',
         '/images/gi/imgChars/Raiden Shogun.webp'),
 
-/*19*/ ('Zhongli', '',
+/*19*/ ('Zhongli',
+        'Zhongli is a playable Geo character in Genshin Impact. ' ||
+        'A consultant of the Wangsheng Funeral Parlor, he is later revealed to be the Geo Archon, Morax (Rex Lapis), ' ||
+        'who has decided to experience the world from the perspective of a mortal.',
         '/images/gi/imgChars/Zhongli.webp'),
 
-/*20*/ ('Venti', '',
+/*20*/ ('Venti',
+        'Venti is a playable Anemo character in Genshin Impact. ' ||
+        'He is a free-spirited, wine-loving bard of Mondstadt, belying his identity as Barbatos, the Anemo Archon.',
         '/images/gi/imgChars/Venti.webp'),
 
-/*21*/ ('Fischl', '',
+/*21*/ ('Fischl',
+        'Fischl von Luftschloss Narfidort is a playable Electro character in Genshin Impact. ' ||
+        'She is an investigator for Mondstadt''s Adventurers'' Guild, accompanied by the night raven Oz.' ||
+        ' A daring adventurer with seemingly outlandish theories that happen to turn out to be true, ' ||
+        'she claims to hail from a world beyond Teyvat.',
         '/images/gi/imgChars/Fischl.webp'),
 
-/*22*/ ('Kazuha', '',
+/*22*/ ('Kaedehara Kazuha',
+        'Kaedehara Kazuha is a playable Anemo character in Genshin Impact. ' ||
+        'A wandering samurai of the once-famed Kaedehara Clan with an ability to read the sounds of nature, ' ||
+        'Kazuha is a temporary crewmember of The Crux. Despite being burdened by the many happenings of his past, ' ||
+        'Kazuha still maintains an easygoing disposition.',
         '/images/gi/imgChars/Kazuha.webp'),
+
     --HSR--
-/*23*/ ('Kafka', '',
+/*23*/ ('Kafka',
+        'Kafka is a playable character in Honkai: Star Rail. ' ||
+        'A member of the Stellaron Hunters who is calm, collected, and beautiful. ' ||
+        'Her record on the wanted list of the Interastral Peace Corporation only lists her name and her hobby. ' ||
+        'People have always imagined her to be elegant, respectable, and in pursuit of things of beauty even in combat.',
         '/images/hsr/imgChars/Kafka.webp'),
 
-/*24*/ ('Blade', '',
+/*24*/ ('Blade',
+        'Blade, previous name Yingxing, is a playable character in Honkai: Star Rail. ' ||
+        'A member of the Stellaron Hunters and a swordsman who abandoned his body to become a blade. ' ||
+        'He pledges loyalty to Destiny''s Slave and possesses a terrifying self-healing ability.',
         '/images/hsr/imgChars/Blade.webp'),
 
-/*25*/ ('Jingliu', '',
+/*25*/ ('Jingliu',
+        'Jingliu is a playable character in Honkai: Star Rail. ' ||
+        'She first appears in the Companion Mission Frosty Blade''s Trial. ' ||
+        'Once the sword master of the Xianzhou Luofu, as well as Jing Yuan''s mentor. ' ||
+        'After succumbing to mara and going insane, ' ||
+        'she managed to escape Starskiff Haven in the Year 7380 of the Star Calendar, ' ||
+        'and easily froze all the Cloud Knights sent after her before Jing Yuan finally confronted and defeated her in battle.' ||
+        ' However, she managed to survive the encounter and traveled the galaxies outside the Luofu for centuries. ' ||
+        'At some unknown point, Jingliu "made a deal" to regain her sanity, ' ||
+        'which Luocha has proposed to be the solution to mara.',
         '/images/hsr/imgChars/Jingliu.webp'),
 
-/*26*/ ('Jing Yuan', '',
+/*26*/ ('Jing Yuan',
+        'Jing Yuan is a playable character in Honkai: Star Rail. ' ||
+        'One of the seven Arbiter-Generals of the Xianzhou Alliance''s Cloud Knights, ' ||
+        'and one of the Six Charioteers of the Xianzhou Luofu. Although he appears lazy, ' ||
+        'Jing Yuan has been a general on the Luofu for centuries, an amount of time exceeding most of his peers. ' ||
+        'This can be attributed to his wisdom and attention to routine measures, ' ||
+        'with Jing Yuan preferring to be preventive rather than corrective.',
         '/images/hsr/imgChars/Jing Yuan.webp'),
 
-/*27*/ ('Feixiao', '',
+/*27*/ ('Feixiao',
+        'Feixiao, real name Saran, is a playable character in Honkai: Star Rail. ' ||
+        'A former war slave of the borisin, Feixiao is now the Merlin''s Claw of the Xianzhou Yaoqing ' ||
+        'and one of the Seven Arbiter-Generals. Her personality is unrestrained and frank, dashing and straightforward. ' ||
+        'She is skilled in all forms of martial arts and has honed herself into a supreme weapon. ' ||
+        'She is widely adored by Xianzhou soldiers and civilians alike as "The Great General." ' ||
+        'However, she bears the burden of the Moon Rage affliction. ' ||
+        'If she were to hunt down all the abominations in her limited lifetime ' ||
+        '— Then the only enemy Feixiao has would be herself.',
         '/images/hsr/imgChars/Feixiao.webp'),
 
-/*28*/ ('Firefly', '',
+/*28*/ ('Firefly',
+        'Firefly is a playable character in Honkai: Star Rail. ' ||
+        'A member of the Stellaron Hunters and a young girl clad in a mechanical armor "SAM." ' ||
+        'Born as a weapon, she''s afflicted with the agony of Entropy Loss Syndrome due to genetic modification. ' ||
+        'She joined the Stellaron Hunters in search of the meaning of life, relentlessly pursuing ways to defy fate.',
         '/images/hsr/imgChars/Firefly.web'),
 
-/*29*/ ('Herta', '',
+/*29*/ ('Herta',
+        'Herta is a playable character in Honkai: Star Rail. ' ||
+        'A puppet of Herta, Member #83 of the Genius Society and master of the eponymous Herta Space Station, ' ||
+        'modeled after her younger self.',
         '/images/hsr/imgChars/Herta.webp'),
 
-/*30*/ ('HuoHuo', '',
+/*30*/ ('Huohuo',
+        'Huohuo is a playable character in Honkai: Star Rail. ' ||
+        'A pitiable and helpless Foxian girl who is also a Ten-Lords Commission Judge-in-training,' ||
+        'who fears ghosts but must catch them. ' ||
+        'Due to having a heliobus named Tail sealed in her tail by the judges of the Ten-Lords Commission, ' ||
+        'she became a "cursed one" who attracts inhuman beings. ' ||
+        'She fears demons and heliobi, ' ||
+        'but contrarily is tasked with their capture and entrusted with the heavy task of eradicating vile spirits. ' ||
+        'Though she believes herself lacking in ability, ' ||
+        'she is unable to muster the courage to resign and continues onward despite walking in a valley of her own fear.',
         '/images/hsr/imgChars/HuoHuo.webp'),
 
-/*31*/ ('Dan Heng', '',
+/*31*/ ('Dan Heng',
+        'Dan Heng is a playable character in Honkai: Star Rail. ' ||
+        'The cold and reserved train guard and archivist of the Astral Express. Wielding a spear named Cloud-Piercer, ' ||
+        'he joined the Express crew to escape his secluded past.',
         '/images/hsr/imgChars/Dan Heng.webp'),
 
-/*32*/ ('Bailu', '',
+/*32*/ ('Bailu',
+        'Bailu is a playable character in Honkai: Star Rail. ' ||
+        'A vivacious young lady of the Vidyadhara race, ' ||
+        'she is known as the "Healer Lady" on The Xianzhou Luofu due to her expertise with medicine. ' ||
+        'She often dishes out unorthodox prescriptions such as "Stay well hydrated" and "Get a good night''s rest." ' ||
+        'Bailu cannot bear to see people suffer, which is why her eyes will be shut tightly as she cures ailments. ' ||
+        '"As long as they''re cured, that''s all that matters, right?"',
         '/images/hsr/imgChars/Bailu.webp'),
 
-/*33*/ ('Luocha', '',
+/*33*/ ('Luocha',
+        'Luocha is a playable character in Honkai: Star Rail. ' ||
+        'A foreign trader who came from beyond the seas, he appears on the Xianzhou Luofu with a huge coffin. ' ||
+        'With his consummate medical skills, he always rescues people in times of danger. ' ||
+        'As a merchant, he is registered at the Xianzhou Yuque within the Alliance, ' ||
+        'and at the Star Unity Mall branch at the North Valley Star within the Interastral Peace Corporation.',
         '/images/hsr/imgChars/Luocha.webp'),
 
-/*34*/ ('Yunli', '',
+/*34*/ ('Yunli',
+        'Yunli is a playable character in Honkai: Star Rail. ' ||
+        'A sword hunter from the Xianzhou Zhuming and "the Flaming Heart" General Huaiyan''s darling granddaughter. ' ||
+        'Frank and straightforward. ' ||
+        'She practiced swordsmanship and forging from Huaiyan since young, ' ||
+        'and thus is the second-youngest prodigy swordmaster of the Flamewheel Octet. ' ||
+        'Fueled by an intense loathing for the cursed swords that emerged from the Zhuming, ' ||
+        'she vowed to "hunt down and wipe out all cursed swords."',
         '/images/hsr/imgChars/Yunli.webp'),
+
     --ZZZ--
-/*35*/ ('Koleda Belabog', '',
+/*35*/ ('Koleda Belabog',
+        'President of Belobog Heavy Industries, ' ||
+        'Koleda wields a hammer and wrench. She holds her father responsible for embezzling company funds, ' ||
+        'which nearly ruined the business, and has since worked to rebuild its reputation.',
         '/images/zzz/imgChars/Koleda Belobog.webp'),
 
-/*36*/ ('Grace Howard', '',
+/*36*/ ('Grace Howard',
+        'The mechanic of Belobog Heavy Industries, Grace is enthusiastic about all things mechanical. ' ||
+        'She has designed and programmed various heavy machinery for the company, referring to them as her "children."',
         '/images/zzz/imgChars/Grace Howard.webp'),
 
-/*37*/ ('Anton Ivanov', '',
+/*37*/ ('Anton Ivanov',
+        'A sharp-tongued project manager at Belobog Heavy Industries, ' ||
+        'Anton refers to his wrist-mounted drill as his "bro."',
         '/images/zzz/imgChars/Anton Ivanov.webp'),
 
-/*38*/ ('Ben Biggers', '',
+/*38*/ ('Ben Biggers',
+        'An anthropomorphic grizzly bear who serves as the accountant for Belobog Heavy Industries. ' ||
+        'Despite his imposing presence, Ben rarely gets angry outside of combat.',
         '/images/zzz/imgChars/Ben Biggers.webp'),
 
-/*39*/ ('Nicole Demara', '',
+/*39*/ ('Nicole Demara',
+        'Founder of the Cunning Hares, Nicole struggles to keep her group financially afloat. ' ||
+        'She wields a large handbag that doubles as a gun.',
         '/images/zzz/imgChars/Nicole Demara.webp'),
 
-/*40*/ ('Anby Demara', '',
+/*40*/ ('Anby Demara',
+        'A calm and collected young girl, ' ||
+        'Anby is unusually competent and efficient in combat but struggles in other aspects. ' ||
+        'She attempts to improve her social skills by imitating scenes from popular movies, often with little success.',
         '/images/zzz/imgChars/Anby Demara.webp'),
 
-/*41*/ ('Ellen Joe', '',
+/*41*/ ('Ellen Joe',
+        'A shark Thiren high-school girl who prefers hanging out with her friends over extra work or club activities. ' ||
+        'She wields an oversized pair of pruning shears.',
         '/images/zzz/imgChars/Ellen Joe.webp'),
 
-/*42*/ ('Rina', '',
+/*42*/ ('Rina',
+        'Also known as Alexandrina Sebastiane. The gentle and delicate Head Maid of Victoria Housekeeping, ' ||
+        'Rina is often accompanied by two floating Bangboo puppets named Drusilla and Anastella. ' ||
+        'She is skilled in all housekeeping duties except cooking, where only Ellen can stomach her dishes. ',
         '/images/zzz/imgChars/Rina.webp'),
 
-/*43*/ ('Corin Wickes', '',
+/*43*/ ('Corin Wickes',
+        'A timid and anxious maid at Victoria Housekeeping, Corin wields a very large buzzsaw as her main tool.',
         '/images/zzz/imgChars/Corin Wickes.webp'),
 
-/*44*/ ('Zhu Yuan', '',
+/*44*/ ('Zhu Yuan',
+        'A perfectionist and elite investigator, Zhu Yuan leads the Criminal Investigation Special Response Team ' ||
+        'in New Eridu’s Public Security. Known for her relentless work ethic and spotless case record, ' ||
+        'she wields the K22 Suppressor, a custom launcher with Ether-powered projectiles.',
         '/images/zzz/imgChars/Zhu Yuan.webp'),
 
-/*45*/ ('Belle', '',
+/*45*/ ('Belle',
+        'Belle is the playable non-combat protagonist of Zenless Zone Zero and is the co-owner of "Random Play" ' ||
+        'together with her older brother, Wise. ' ||
+        'When the player starts the game, they will choose between Belle and Wise and the other will become an assistant. ' ||
+        'She and her brother also work together as the Proxy known as "Phaethon".',
         '/images/zzz/imgChars/Belle.webp'),
 
-/*46*/ ('Wise', '',
+/*46*/ ('Wise',
+        'Wise is the playable non-combat protagonist of Zenless Zone Zero and is the co-owner of "Random Play"' ||
+        'together with his younger sister, Belle. ' ||
+        'When the player starts the game, they will choose between Belle and Wise and the other will become an assistant. ' ||
+        'He and his sister also work together as the Proxy known as Phaethon.',
         '/images/zzz/imgChars/Wise.webp');
 
 --Outfits--
@@ -353,15 +495,18 @@ VALUES
         --Aponia--
         ('Disciplinary Perdition', 10),
 
-        --Kosma--
-        ('None', 13),
+        --Kosma has no outfits--
 
     --GI--
         --Diluc--
         ('Darknight Blaze', 16),
         ('Red Dead of Night', 16),
 
-    --HSR--
+        --Hu Tao--
+        ('Plum Blossom Bouquet', 15),
+        ('Cherries Snow-Laden', 15),
+
+    --HSR currently has none--
 
     --ZZZ--
         ('Currently none', 35);

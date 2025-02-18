@@ -14,7 +14,7 @@
     <title>Honkai Impact</title>
 </head>
 <body>
-    <h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
+    <h1 th:replace="~{fragments/header :: navigation}"/>
 
 <main class="container">
 
@@ -43,5 +43,7 @@
         </div>
     </div>
 </main>
+
+<p th:replace="~{fragments/footer :: footer}"/>
 </body>
 </html>

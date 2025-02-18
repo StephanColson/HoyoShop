@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
@@ -6,11 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-    <title>Carting</title>
+    <title>Footer Fragment</title>
 </head>
 <body>
-<h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
-<h2 class="text-light">Displaying your shopping cart</h2>
-<p th:replace="~{fragments/footer :: footer}"/>
+    <div th:fragment="footer">
+        <div class="border-top">
+            <p th:text="|Educational purposes / Non-commericial use|"/>
+        </div>
+    </div>
 </body>
 </html>
