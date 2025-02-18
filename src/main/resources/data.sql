@@ -501,5 +501,3 @@ VALUES
         (39, 43),
         (39, 44),
         (40, 41);
-
--- Many to Many between Products and Outfits --

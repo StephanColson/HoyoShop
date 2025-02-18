@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>Error</title>
+</head>
+<body>
+    <h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
+    <main class="container text-center mt-5">
+        <img th:src="@{/images/hi3rd/Ai_chan.gif}">
+        <h2 class="rgb-text">ERROR 404</h2>
+        <h3 class="border-bottom">Page or Link not found</h3>
+    </main>
+</body>
+</html>
