@@ -14,6 +14,7 @@ public class Game {
     @Column(length = 10000)
     private String description;
     private String link;
+    private String officialLink;
 
     @OneToMany(mappedBy = "game")
     private Collection<Product> product;
@@ -67,6 +68,14 @@ public class Game {
 
     public void setLink(String link) {
         this.link = link;
+    }
+
+    public String getOfficialLink() {
+        return officialLink;
+    }
+
+    public void setOfficialLink(String officialLink) {
+        this.officialLink = officialLink;
     }
 
     public Collection<Product> getProduct() {

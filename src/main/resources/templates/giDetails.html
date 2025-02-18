@@ -11,16 +11,16 @@
 <body>
     <h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
 
-    <div class="container">
+    <main class="container" th:object="${product}">
         <div class="row">
             <div>
-                <img th:src="${product.image}">
+                <img th:src="*{image}">
             </div>
             <div>
-                <h3 th:text="${product.name}">title</h3>
+                <h3 th:text="*{name}">title</h3>
             </div>
             <div>
-                <p th:text="${product.description}">description</p>
+                <p th:text="*{description}">description</p>
             </div>
         </div>
 
@@ -31,6 +31,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>

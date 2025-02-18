@@ -1,30 +1,34 @@
 --Games--
-INSERT INTO game (title, description, image, link)
+INSERT INTO game (title, description, image, link, official_link)
 VALUES ('Honkai Impact 3rd',
         'A fast-paced action RPG with anime-style visuals, ' ||
         'focused on intense combat mechanics and a deep storyline about the battle against the "Honkai," ' ||
         'an alien force threatening humanity. Players control a team of "Valkyries," each with unique abilities, ' ||
         'as they unravel a mix of tragedy, sacrifice, and hope.',
-        '/images/hi3rd/Honkai Impact 3rd Cover.webp', '/hi3rd'),
+        '/images/hi3rd/Honkai Impact 3rd Cover.webp', '/hi3rd',
+        'https://honkaiimpact3.hoyoverse.com/global/en-us/fab'),
 
        ('Genshin Impact',
         'An open-world action RPG that blends exploration, elemental combat, ' ||
         'and a gacha system. Set in the vibrant world of Teyvat, players embark on a journey to reunite with ' ||
         'their lost sibling while uncovering the secrets of the Seven Archons and engaging in dynamic quests.',
-        '/images/gi/Genshin Impact Cover.webp', '/gi'),
+        '/images/gi/Genshin Impact Cover.webp', '/gi',
+        'https://genshin.hoyoverse.com/en/'),
 
        ('Honkai Star Rail',
         'A turn-based RPG with a focus on strategic combat and storytelling. ' ||
         'Players explore a sci-fi universe aboard the Astral Express, ' ||
         'battling interstellar threats and uncovering mysteries about the mythical "Stellaron" alongside ' ||
         'a diverse cast of characters.',
-        '/images/hsr/Honkai Star Rail Cover.jpg', '/hsr'),
+        '/images/hsr/Honkai Star Rail Cover.jpg', '/hsr',
+        'https://hsr.hoyoverse.com/en-us/'),
 
        ('Zenless Zone Zero',
         'An urban fantasy action RPG with a roguelike twist. ' ||
         'Set in a post-apocalyptic city plagued by mysterious Hollows, players take on missions as "Proxies," ' ||
         'combining stylish real-time combat with narrative-driven exploration of a gritty, high-tech world.',
-        '/images/zzz/Zenless Zone Zero Cover.webp', '/zzz');
+        '/images/zzz/Zenless Zone Zero Cover.webp', '/zzz',
+        'https://zenless.hoyoverse.com/en-us/');
 
 --Categories--
 INSERT INTO category (type)

@@ -5,9 +5,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <title>Game Details</title>
 </head>
 <body>
-    <h1>Game Title</h1>
+<h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
+    <main class="container" th:object="${game}">
+        <h1 th:text="*{title}"/>
+
+        <div>
+            <p th:text="*{description}"/>
+            <p>
+               Official Site:  <a th:href="*{officialLink}" th:text="*{officialLink}" target="_blank"></a>
+            </p>
+        </div>
+    </main>
 </body>
 </html>
