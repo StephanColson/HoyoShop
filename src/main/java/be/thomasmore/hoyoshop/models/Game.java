@@ -19,17 +19,6 @@ public class Game {
     @OneToMany(mappedBy = "game")
     private Collection<Product> product;
 
-
-    public Game(Integer id, String title, String description, String image, String link) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.image = image;
-        this.link = link;
-    }
-
-    public Game() {}
-
     public String getDescription() {
         return description;
     }

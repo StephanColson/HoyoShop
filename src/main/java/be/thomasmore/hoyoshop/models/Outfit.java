@@ -13,12 +13,6 @@ public class Outfit {
     @ManyToOne
     private GameCharacter gameCharacter;
 
-    public Outfit(Integer id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public Outfit() {}
 
     public Integer getId() {
         return id;

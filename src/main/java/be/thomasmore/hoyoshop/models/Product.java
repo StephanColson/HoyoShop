@@ -23,16 +23,6 @@ public class Product {
     @ManyToMany(fetch = FetchType.LAZY)
     private Collection<GameCharacter> gameCharacters;
 
-    public Product(Integer id, String name, double price, String description, String image) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.description = description;
-        this.image = image;
-    }
-
-    public Product() {}
-
     public Collection<GameCharacter> getGameCharacters() {
         return gameCharacters;
     }

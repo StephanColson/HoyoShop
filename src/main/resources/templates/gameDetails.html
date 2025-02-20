@@ -11,13 +11,23 @@
 <body>
 <h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
     <main class="container" th:object="${game}">
-        <h1 th:text="*{title}"/>
+
+        <h1 th:text="*{title}" class="mt-4 text-warning"/>
 
         <div>
-            <p th:text="*{description}"/>
-            <p>
-               Official Site:  <a th:href="*{officialLink}" th:text="*{officialLink}" target="_blank"></a>
+            <p th:text="*{description}" class="text-light"/>
+            <p class="text-light">
+               Official Site:
+                <a th:href="*{officialLink}" th:text="*{officialLink}" target="_blank"
+                   class="text-decoration-none text-danger"></a>
             </p>
+        </div>
+
+        <div>
+            <h2 th:text="|Character List:|" class="mt-2 text-warning"/>
+            <div>
+
+            </div>
         </div>
     </main>
 <p th:replace="~{fragments/footer :: footer}"/>
