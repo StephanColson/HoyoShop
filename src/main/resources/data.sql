@@ -304,7 +304,7 @@ VALUES
         'Anton refers to his wrist-mounted drill as his "bro."',
         '/images/zzz/imgChars/Anton Ivanov.webp'),
 
-/*38*/ ('Ben Biggers',
+/*38*/ ('Ben Bigger',
         'An anthropomorphic grizzly bear who serves as the accountant for Belobog Heavy Industries. ' ||
         'Despite his imposing presence, Ben rarely gets angry outside of combat.',
         '/images/zzz/imgChars/Ben Biggers.webp'),
@@ -390,6 +390,7 @@ VALUES
         ('Born in Flames', 1),
         ('Herrscher of Finality', 1),
         ('Selenic Ripples', 1),
+        ('Ba-Dum! Fiery Wishing Star', 1),
 
         --Bronya zaychik--
         ('Valkyrie Chariot', 2),
@@ -491,9 +492,53 @@ VALUES
         ('Hawk of the Yard', 9),
         ('Onyx Simurgh', 9),
         ('Phoenix', 9),
+        ('Fire and Sword', 9),
+        ('Sword and Fire', 9),
+        ('Night Squire', 9),
+        ('Rustic Noir', 9),
+        ('Spring Traveler', 9),
+        ('Dark Butler', 9),
+        ('Autumn Shades', 9),
+        ('Shadow Knight', 9),
+        ('Blood Voivode', 9),
+        ('Seagull''s Soar' , 9),
+        ('Azure Empyrea', 9),
+        ('Cerulean Court', 9),
+        ('Taixuan Impression', 9),
+        ('Fenghuang of Vicissitude', 9),
+        ('Crane of Taixuan', 9),
 
         --Aponia--
         ('Disciplinary Perdition', 10),
+        ('Mesmerizing Blue', 10),
+        ('Butterfly Dreams', 10),
+
+        --Yae Sakura--
+        ('Gyakushinn Miko', 11),
+        ('Midnight Marigold', 11),
+        ('Frozen Sakura', 11),
+        ('Summer Dream', 11),
+        ('Sublime Lotus', 11),
+        ('Summer Sakura', 11),
+        ('Goushinnso Memento', 11),
+        ('Blanc X: Ichijin', 11),
+        ('Blooming Maiko', 11),
+        ('Hyoukai Sonata', 11),
+        ('Sakura Summer', 11),
+        ('Flame Sakitama', 11),
+        ('Dream Raiment', 11),
+        ('Rising Moon', 11),
+        ('Mauve Cascade', 11),
+        ('Darkbolt Jonin', 11),
+        ('Peach Sanctuary', 11),
+        ('Shiden Kasumi', 11),
+        ('Neon Shade', 11),
+        ('Shimmering Wavelets', 11),
+
+        --Eden--
+        ('Golden Diva', 12),
+        ('Flowing Rhyme', 12),
+        ('Crimson Carol', 12),
 
         --Kosma has no outfits--
 
@@ -506,10 +551,20 @@ VALUES
         ('Plum Blossom Bouquet', 15),
         ('Cherries Snow-Laden', 15),
 
-    --HSR currently has none--
+        --Fischl--
+        ('Dunkelnacht Sakrament', 21),
+        ('Ein Immernachtstraum', 21),
+
+    --HSR currently has none (in the actual game March 7th has an outfit)--
 
     --ZZZ--
-        ('Currently none', 35);
+        --Nicole Demara--
+        ('Lil Sassy', 39),
+        ('Cunning Cutie', 39),
+
+        --Ellen Joe--
+        ('Ellen Scissorhands', 41),
+        ('On Campus', 41);
 
 --Product--
 INSERT INTO product (name, price, description, image, GAME_ID, CATEGORY_ID)
