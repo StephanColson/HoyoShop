@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +20,8 @@ public class ZzzController {
     private ProductRepository productRepository;
 
     @GetMapping("/zzz")
-    public String zzz(Model model) {
-        final Iterable<Product> products = productRepository.findByGame_Title("Zenless Zone Zero");
+    public String zzz(Model model, @RequestParam(required = false) String searchTerm) {
+        final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm, "Zenless Zone Zero");
         model.addAttribute("products", products);
         model.addAttribute("activePage", "zzz");
         return "zzz";

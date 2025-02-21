@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +20,8 @@ public class Hi3rdController {
     private ProductRepository productRepository;
 
     @GetMapping("/hi3rd")
-    public String hi3rd(Model model) {
-        final Iterable<Product> products = productRepository.findByGame_Title("Honkai Impact 3rd");
+    public String hi3rd(Model model, @RequestParam (required = false) String searchTerm) {
+        final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm,"Honkai Impact 3rd");
         model.addAttribute("products", products);
         model.addAttribute("activePage", "hi3rd");
         return "hi3rd";

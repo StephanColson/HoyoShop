@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         .btn:hover{
             color: #f8f9fa !important;
@@ -17,9 +18,21 @@
     <h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
     <main class="container">
         <h2 class="text-light text-center m-3">Welcome to the land of Teyvat Traveller!</h2>
-        <div class="row mb-4">
-            <input class="col-12" type="text" placeholder="Search Genshin Impact items">
-        </div>
+
+        <form th:action="@{/gi}">
+            <div class="row">
+                <div class="input-group">
+                    <input class="form-control bg-light" type="text" placeholder="Search Genshin Impact items">
+                    <button type="submit" class="btn btn-light">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <button type="button" class="btn btn-info"
+                data-bs-toggle="modal"
+                data-bs-target="#modalFilter">Filters</button>
 
         <div class="row">
             <div th:each="product : ${products}" th:object="${product}" class="col-lg-4 col-md-4 col-6 my-2">

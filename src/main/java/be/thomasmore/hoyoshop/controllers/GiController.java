@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,8 +20,8 @@ public class GiController {
     private ProductRepository productRepository;
 
     @GetMapping("/gi")
-    public String gi(Model model) {
-        final Iterable<Product> products = productRepository.findByGame_Title("Genshin Impact");
+    public String gi(Model model, @RequestParam (required = false) String searchTerm) {
+        final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm, "Genshin Impact");
         model.addAttribute("products", products);
         model.addAttribute("activePage", "gi");
         return "gi";
