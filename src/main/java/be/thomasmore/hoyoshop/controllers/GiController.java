@@ -20,8 +20,11 @@ public class GiController {
     private ProductRepository productRepository;
 
     @GetMapping("/gi")
-    public String gi(Model model, @RequestParam (required = false) String searchTerm) {
-        final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm, "Genshin Impact");
+    public String gi(Model model,
+                     @RequestParam (required = false) String searchTerm,
+                     @RequestParam (required = false) Integer categoryId, Integer outfitId, Integer characterId) {
+        final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm,
+                "Genshin Impact", categoryId, outfitId, characterId);
         model.addAttribute("products", products);
         model.addAttribute("activePage", "gi");
         return "gi";

@@ -68,7 +68,39 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"/>
                     </div>
                     <div class="modal-body">
-                        <p>Test</p>
+                        <div class="row">
+                            <label th:text="|Category|"/>
+                            <div>
+                                <select name="categoryId">
+                                    <option value="">All</option>
+                                    <option th:each="category : ${categories}"
+                                            th:value="${category.id}"
+                                            th:text="${category.type}"></option>
+                                </select>
+                            </div>
+
+                            <label th:text="|Character|"/>
+                            <div>
+                                <select name="characterId">
+                                    <option value="">All</option>
+                                    <option th:each="gameCharacter: ${gameCharacters}"
+                                            th:value="${gameCharacter.id}"
+                                            th:text="${gameCharacter.name}"></option>
+                                </select>
+                            </div>
+
+                            <label th:text="|Outfit|"/>
+                            <div>
+                                <select name="outfitId">
+                                    <option value="">All</option>
+                                    <option th:each="outfit: ${outfits}"
+                                            th:value="${outfit.id}"
+                                            th:text="${outfit.name}">Plush</option>
+                                </select>
+                            </div>
+
+                            <label th:text="|Price|"/>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button"  class="btn btn-danger" data-bs-dismiss="modal" th:text="|Close|"/>

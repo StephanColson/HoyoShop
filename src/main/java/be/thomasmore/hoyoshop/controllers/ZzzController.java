@@ -20,8 +20,11 @@ public class ZzzController {
     private ProductRepository productRepository;
 
     @GetMapping("/zzz")
-    public String zzz(Model model, @RequestParam(required = false) String searchTerm) {
-        final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm, "Zenless Zone Zero");
+    public String zzz(Model model,
+                      @RequestParam(required = false) String searchTerm,
+                      @RequestParam (required = false) Integer categoryId, Integer outfitId, Integer characterId) {
+        final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm,
+                "Zenless Zone Zero", categoryId, outfitId, characterId);
         model.addAttribute("products", products);
         model.addAttribute("activePage", "zzz");
         return "zzz";
