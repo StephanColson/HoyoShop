@@ -45,8 +45,15 @@
                         </div>
                         <div class="card-footer text-danger">
                             <p th:text="|*{price} Euro|" />
-                            <a class="btn bg-danger text-light-emphasis">Buy</a>
-                            <a class="btn bg-info text-light-emphasis" th:href="@{|/giDetails/${product.id}|}">Details</a>
+                            <div class="d-flex justify-content-between">
+                                <form th:action="@{/cart/add}" method="post">
+                                    <input type="hidden" name="productId" th:value="*{id}">
+                                    <input type="hidden" name="productName" th:value="*{name}">
+                                    <input type="hidden" name="productPrice" th:value="*{price}">
+                                    <button type="submit" class="btn bg-danger text-light-emphasis">Buy</button>
+                                </form>
+                                <a class="btn bg-info text-light-emphasis" th:href="@{|/giDetails/${product.id}|}">Details</a>
+                            </div>
                         </div>
                     </div>
                 </div>
