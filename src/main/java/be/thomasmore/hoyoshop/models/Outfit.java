@@ -29,4 +29,20 @@ public class Outfit {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public GameCharacter getGameCharacter() {
+        return gameCharacter;
+    }
+
+    public void setGameCharacter(GameCharacter gameCharacter) {
+        this.gameCharacter = gameCharacter;
+    }
 }
