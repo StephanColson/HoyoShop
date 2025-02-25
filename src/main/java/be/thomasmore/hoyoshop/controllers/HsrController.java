@@ -41,12 +41,12 @@ public class HsrController {
                 "Honkai Star Rail", categoryId, outfitId, characterId);
 
         final Iterable<Category> categories = categoryRepository.findAll();
-        final Iterable<GameCharacter> gameCharacters = gameCharacterRepository.findAll();
+        final Iterable<GameCharacter> gameCharacterList = gameCharacterRepository.findByGameId(3);
         final Iterable<Outfit> outfits = outfitRepository.findAll();
 
         model.addAttribute("products", products);
         model.addAttribute("categories", categories);
-        model.addAttribute("gameCharacters", gameCharacters);
+        model.addAttribute("gameCharacters", gameCharacterList);
         model.addAttribute("outfits", outfits);
         model.addAttribute("activePage", "hsr");
         return "hsr";

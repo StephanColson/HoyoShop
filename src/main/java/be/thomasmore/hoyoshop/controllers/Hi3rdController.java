@@ -43,13 +43,16 @@ public class Hi3rdController {
         final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm,
                 "Honkai Impact 3rd", categoryId, outfitId, characterId);
         final Iterable<Category> categories = categoryRepository.findAll();
-        final Iterable<GameCharacter> gameCharacters = gameCharacterRepository.findAll();
-        final Iterable<Outfit> outfits = outfitRepository.findAll();
+        final Iterable<GameCharacter> gameCharacterList = gameCharacterRepository.findByGameId(1);
+        Iterable<Outfit> outfits = (characterId != null) ?
+                outfitRepository.findByGameCharacter(characterId) :
+                outfitRepository.findAll();
 
         model.addAttribute("products", products);
         model.addAttribute("categories", categories);
-        model.addAttribute("gameCharacters", gameCharacters);
+        model.addAttribute("gameCharacters", gameCharacterList);
         model.addAttribute("outfits", outfits);
+        model.addAttribute("selectedCharacterId", characterId);
         model.addAttribute("activePage", "hi3rd");
         return "hi3rd";
     }
