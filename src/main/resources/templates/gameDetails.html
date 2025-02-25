@@ -26,9 +26,17 @@
         <div>
             <h2 th:text="|Character List:|" class="mt-2 text-warning"/>
             <div class="row">
-                <div th:each="gameCharacter: ${gameCharacters}" class="col-3">
-                    <div class="text-center m-2 border">
-                        <p th:text="${gameCharacter.name}"/>
+                <div th:each="gameCharacter: ${gameCharacters}" th:object="${gameCharacter}" class="col-2 m-2 card">
+                    <div class="text-center m-2 card-header">
+                        <div class="card-img">
+                            <img th:src="*{image}" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <p th:text="*{name}"/>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a class="btn btn-info" th:href="@{|/gameCharacter/${gameCharacter.id}|}">More Info</a>
                     </div>
                 </div>
             </div>

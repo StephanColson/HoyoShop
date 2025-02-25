@@ -234,7 +234,7 @@ VALUES
         'A member of the Stellaron Hunters and a young girl clad in a mechanical armor "SAM." ' ||
         'Born as a weapon, she''s afflicted with the agony of Entropy Loss Syndrome due to genetic modification. ' ||
         'She joined the Stellaron Hunters in search of the meaning of life, relentlessly pursuing ways to defy fate.',
-        '/images/hsr/imgChars/Firefly.web', 3),
+        '/images/hsr/imgChars/Firefly.webp', 3),
 
 /*29*/ ('Herta',
         'Herta is a playable character in Honkai: Star Rail. ' ||
