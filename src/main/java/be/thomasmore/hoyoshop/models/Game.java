@@ -74,4 +74,15 @@ public class Game {
     public void setProduct(Collection<Product> product) {
         this.product = product;
     }
+
+    @OneToMany(mappedBy = "game")
+    private Collection<GameCharacter> gameCharacters;
+
+    public Collection<GameCharacter> getGameCharacters() {
+        return gameCharacters;
+    }
+
+    public void setGameCharacters(Collection<GameCharacter> gameCharacters) {
+        this.gameCharacters = gameCharacters;
+    }
 }

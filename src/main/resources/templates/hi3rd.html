@@ -92,7 +92,8 @@
                                     <option value="">All</option>
                                     <option th:each="gameCharacter: ${gameCharacters}"
                                             th:value="${gameCharacter.id}"
-                                            th:text="${gameCharacter.name}"></option>
+                                            th:text="${gameCharacter.name}"
+                                            th:selected="${characterId != null and gameCharacter.id == characterId}"></option>
                                 </select>
                             </div>
 

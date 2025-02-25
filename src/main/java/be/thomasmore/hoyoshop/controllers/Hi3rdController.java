@@ -36,7 +36,9 @@ public class Hi3rdController {
     @GetMapping("/hi3rd")
     public String hi3rd(Model model,
                         @RequestParam (required = false) String searchTerm,
-                        @RequestParam (required = false) Integer categoryId, Integer outfitId, Integer characterId)
+                        @RequestParam (required = false) Integer categoryId,
+                        @RequestParam (required = false) Integer outfitId,
+                        @RequestParam (required = false) Integer characterId)
     {
         final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm,
                 "Honkai Impact 3rd", categoryId, outfitId, characterId);

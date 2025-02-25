@@ -14,6 +14,9 @@ public class GameCharacter {
     @Column(length = 10000)
     private String description;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Game game;
+
     @ManyToMany(mappedBy = "gameCharacters")
     private Collection<Product> products;
 

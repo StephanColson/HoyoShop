@@ -1,6 +1,8 @@
 package be.thomasmore.hoyoshop.controllers;
 
 import be.thomasmore.hoyoshop.models.Game;
+import be.thomasmore.hoyoshop.models.GameCharacter;
+import be.thomasmore.hoyoshop.repositories.GameCharacterRepository;
 import be.thomasmore.hoyoshop.repositories.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +16,9 @@ import java.util.Optional;
 public class HomeController {
     @Autowired
     private GameRepository gameRepository;
+
+    @Autowired
+    private GameCharacterRepository gameCharacterRepository;
 
     @GetMapping({"/", "/home"})
     public String home(Model model) {
@@ -36,6 +41,9 @@ public class HomeController {
         if (gameData.isPresent()) {
             model.addAttribute("game", gameData.get());
         }
+
+        final Iterable<GameCharacter> gameCharactersListing = gameCharacterRepository.findByGameId(id);
+        model.addAttribute("gameCharacters", gameCharactersListing);
         return "gameDetails";
     }
 }

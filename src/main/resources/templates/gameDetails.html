@@ -25,8 +25,12 @@
 
         <div>
             <h2 th:text="|Character List:|" class="mt-2 text-warning"/>
-            <div>
-
+            <div class="row">
+                <div th:each="gameCharacter: ${gameCharacters}" class="col-3">
+                    <div class="text-center m-2 border">
+                        <p th:text="${gameCharacter.name}"/>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
