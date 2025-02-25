@@ -576,7 +576,7 @@ VALUES
         ('Herrscher of the Void figurine', 17, 'Made out of pvc', '/images/hi3rd/Herrscher of the Void figurine.webp', 1, 2),
         ('Honkai Impact Key-Chain set', 20, 'Arcylic plastic key-chains', '/images/hi3rd/keychain set.jpg', 1, 3),
         ('Kiana Kaslana Poster', 15.5, 'Paper poster', 'images/hi3rd/Kiana Kaslana Poster.jpg', 1, 4),
-        ('Mobius poster set', 60, 'Contains 6 posters!', 'images/hi3rd/Mobius Poster set.jpg', 1, 4),
+        ('Mobius Poster set', 60, 'Contains 6 posters', 'images/hi3rd/Mobius Poster set.jpg', 1, 4),
         ('Plush set', 30, 'Made with cotton', '/images/hi3rd/Plush set.jpg', 1, 1),
         ('Raiden Mei Figurine', 16, 'Made with pvc', '/images/hi3rd/Raiden Mei Figurine.jpg', 1, 2),
         ('Raiden Mei Poster', 14, 'Poster made out of paper', '/images/hi3rd/Raiden Mei Poster.jpg', 1, 4),

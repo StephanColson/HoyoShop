@@ -26,13 +26,18 @@
         </div>
 
         <div class="row">
-            <div th:each="gameCharacter : ${gameCharacters}">
-                <div>
-                    <a th:text="${gameCharacter.name}" th:href="@{|/gameCharacter/${gameCharacter.id}|}">character list</a>
-                </div>
+            <div th:each="gameCharacter : ${gameCharacters}" th:object="${gameCharacter}" class="col-4 mb-2">
+                <a class="text-decoration-none" th:href="@{|/gameCharacter/*{id}|}">
+                    <div class="card">
+                        <div class="card-body text-center text-light">
+                            <h4 th:text="*{name}"/>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </main>
+
     <p th:replace="~{fragments/footer :: footer}"/>
 </body>
 </html>
