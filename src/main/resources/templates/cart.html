@@ -29,10 +29,44 @@
 
     <h3 class="text-light">Total: <span th:text="|${totalPrice} Euro|"></span></h3>
 
-    <form th:action="@{/cart/clear}" method="post">
-        <button type="submit" class="btn btn-danger mb-2">Clear Cart</button>
-    </form>
+    <div class="row">
+        <div class="col-4 justify-content-end">
+            <button type="button" class="btn btn-info"
+                    data-bs-toggle="modal"
+                    data-bs-target="#buyMessage">Buy</button>
+        </div>
+        <div class="col-4">
+            <form th:action="@{/cart/clear}" method="post">
+                <button type="submit" class="btn btn-danger mb-2">Clear Cart</button>
+            </form>
+        </div>
+    </div>
 </main>
+
+<div class="modal fade" id="buyMessage" tabindex="-1" aria-labelledby="Confirmation Message" aria-hidden="true">
+    <div class="modal-dialog">
+        <form th:action="@{/cart/clear}" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title text-light" id="modalTitle" th:text="|Confirmation Message|"/>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"/>
+                </div>
+                <div class="modal-body text-light">
+                    <h4>Purchase?</h4>
+                    <div>
+                        <ul>
+                            <li th:each="item : ${cartItems}" th:text="${item.name}"/>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <p class="text-light" th:text="|Total: ${totalPrice} Euro|"/>
+                    <button type="submit"  class="btn btn-info" th:text="|Confirm|"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
 
 <p th:replace="~{fragments/footer :: footer}"/>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
