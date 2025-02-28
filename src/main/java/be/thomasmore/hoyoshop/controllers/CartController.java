@@ -23,7 +23,16 @@ public class CartController {
             cart = new ArrayList<>();
         }
 
-        double totalPrice = cart.stream().mapToDouble(Product::getPrice).sum();
+        //double totalPrice = cart.stream()
+        //            .mapToDouble(p -> p.getPrice() * p.getQuantity()) // Multiply price by quantity
+        //            .sum();
+
+        //These 2 works the same.
+        double totalPrice = 0;
+        for (Product product : cart) {
+            totalPrice += product.getPrice() * product.getQuantity();
+        }
+
 
         model.addAttribute("cartItems", cart);
         model.addAttribute("totalPrice", totalPrice);
@@ -39,14 +48,26 @@ public class CartController {
             cart = new ArrayList<>();
         }
 
-        Product product = new Product();
-        product.setName(productName);
-        product.setPrice(productPrice);
-        cart.add(product);
+        boolean found = false;
+        for (Product product : cart) {
+            if (product.getName().equals(productName)) {
+                product.setQuantity(product.getQuantity() + 1);
+                found = true;
+            }
+        }
+
+        if (!found) {
+            Product product = new Product();
+            product.setName(productName);
+            product.setPrice(productPrice);
+            product.setQuantity(1);
+            cart.add(product);
+        }
 
         session.setAttribute("cart", cart);
         return "redirect:/cart";
     }
+
 
     @PostMapping("/clear")
     public String clearCart(HttpSession session) {

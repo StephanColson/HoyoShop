@@ -13,6 +13,8 @@ public class Product {
     private String image;
     private double price;
     private String description;
+    //@Transient -> doesn't store info on the database
+    private int quantity;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Game game;
@@ -69,5 +71,13 @@ public class Product {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

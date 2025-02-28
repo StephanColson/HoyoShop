@@ -734,55 +734,55 @@ VALUES
          '/images/zzz/outfits/ellenJoe/On_Campus.webp',41);
 
 --Product--
-INSERT INTO product (name, price, description, image, GAME_ID, CATEGORY_ID)
+INSERT INTO product (name, price, description, image, quantity, GAME_ID, CATEGORY_ID)
 VALUES
     --Honkai Impact 3rd--
-        ('Trio Poster', 17.5, 'Made with cotton', '/images/hi3rd/Friend group poster.jpg',1, 4),
-        ('Griseo Key-Chain', 15, 'It is arcylic plastic and contains 2 key-chains', '/images/hi3rd/Griseo key chain set.jpg', 1, 3),
-        ('Herrscher of Finality figurine', 18, 'Made out of pvc', '/images/hi3rd/Herrscher of Finality figurine.jpg', 1, 2),
-        ('Herrscher of the Void figurine', 17, 'Made out of pvc', '/images/hi3rd/Herrscher of the Void figurine.webp', 1, 2),
-        ('Honkai Impact Key-Chain set', 20, 'Arcylic plastic key-chains', '/images/hi3rd/keychain set.jpg', 1, 3),
-        ('Kiana Kaslana Poster', 15.5, 'Paper poster', '/images/hi3rd/Kiana Kaslana Poster.jpg', 1, 4),
-        ('Mobius Poster set', 60, 'Contains 6 posters', '/images/hi3rd/Mobius Poster set.jpg', 1, 4),
-        ('Plush set', 30, 'Made with cotton', '/images/hi3rd/Plush set.jpg', 1, 1),
-        ('Raiden Mei Figurine', 16, 'Made with pvc', '/images/hi3rd/Raiden Mei Figurine.jpg', 1, 2),
-        ('Raiden Mei Poster', 14, 'Poster made out of paper', '/images/hi3rd/Raiden Mei Poster.jpg', 1, 4),
+        ('Trio Poster', 17.5, 'Made with cotton', '/images/hi3rd/Friend group poster.jpg', 10, 1, 4),
+        ('Griseo Key-Chain', 15, 'It is arcylic plastic and contains 2 key-chains', '/images/hi3rd/Griseo key chain set.jpg', 7, 1, 3),
+        ('Herrscher of Finality figurine', 18, 'Made out of pvc', '/images/hi3rd/Herrscher of Finality figurine.jpg', 5, 1, 2),
+        ('Herrscher of the Void figurine', 17, 'Made out of pvc', '/images/hi3rd/Herrscher of the Void figurine.webp', 13, 1, 2),
+        ('Honkai Impact Key-Chain set', 20, 'Arcylic plastic key-chains', '/images/hi3rd/keychain set.jpg', 9, 1, 3),
+        ('Kiana Kaslana Poster', 15.5, 'Paper poster', '/images/hi3rd/Kiana Kaslana Poster.jpg', 10, 1, 4),
+        ('Mobius Poster set', 60, 'Contains 6 posters', '/images/hi3rd/Mobius Poster set.jpg', 2, 1, 4),
+        ('Plush set', 30, 'Made with cotton', '/images/hi3rd/Plush set.jpg', 23, 1, 1),
+        ('Raiden Mei Figurine', 16, 'Made with pvc', '/images/hi3rd/Raiden Mei Figurine.jpg', 14, 1, 2),
+        ('Raiden Mei Poster', 14, 'Poster made out of paper', '/images/hi3rd/Raiden Mei Poster.jpg', 5, 1, 4),
 
     --Genshin Impact--
-        ('Archons Poster', 20, '1 poster of 3 archons together', '/images/gi/Archons Poster.webp', 2, 4),
-        ('Arlecchino Figurine.webp', 25, 'made with pvc', '/images/gi/Arlecchino Figurine.webp', 2, 2),
-        ('Arlecchino key-chain', 12, 'Arcylic plastic', '/images/gi/Arlecchino key chain.jpg', 2, 3),
-        ('Diluc Plush', 13.5, 'Cotton doll', '/images/gi/Diluc Plush.jpg', 2, 1),
-        ('Fischl Figurine', 24.5, 'made with pvc', '/images/gi/Fischl Figurine.jpg', 2, 2),
-        ('Fischl Poster', 11.5, 'paper poster', '/images/gi/Fischl Poster.jpg', 2, 4),
-        ('Furina key-chain set', 20, 'contains 8 key-chains of Furina', '/images/gi/Furina Key chain Set.jpg', 2, 3),
-        ('Furina Plush', 13, 'cotton doll', '/images/gi/Furina Plush.jpg', 2, 1),
-        ('Hu Tao Figurine', 22, 'pvc figurine', '/images/gi/Hu Tao Figurine.webp', 2, 2),
-        ('Kazuha Poster', 14.5, 'paper poster', '/images/gi/Kazuha Poster.jpg', 2, 4),
+        ('Archons Poster', 20, '1 poster of 3 archons together', '/images/gi/Archons Poster.webp', 10, 2, 4),
+        ('Arlecchino Figurine.webp', 25, 'made with pvc', '/images/gi/Arlecchino Figurine.webp', 10,  2, 2),
+        ('Arlecchino key-chain', 12, 'Arcylic plastic', '/images/gi/Arlecchino key chain.jpg', 10, 2, 3),
+        ('Diluc Plush', 13.5, 'Cotton doll', '/images/gi/Diluc Plush.jpg', 7, 2, 1),
+        ('Fischl Figurine', 24.5, 'made with pvc', '/images/gi/Fischl Figurine.jpg', 7, 2, 2),
+        ('Fischl Poster', 11.5, 'paper poster', '/images/gi/Fischl Poster.jpg', 5, 2, 4),
+        ('Furina key-chain set', 20, 'contains 8 key-chains of Furina', '/images/gi/Furina Key chain Set.jpg', 10, 2, 3),
+        ('Furina Plush', 13, 'cotton doll', '/images/gi/Furina Plush.jpg', 3, 2, 1),
+        ('Hu Tao Figurine', 22, 'pvc figurine', '/images/gi/Hu Tao Figurine.webp', 6, 2, 2),
+        ('Kazuha Poster', 14.5, 'paper poster', '/images/gi/Kazuha Poster.jpg', 8, 2, 4),
 
     --Honkai Star Rail--
-        ('Honkai Star Rail plush set', 20, 'Cotton Plush set', '/images/hsr/4 plush set.webp', 3, 1),
-        ('Feixiao Figurine', 27, 'pvc figurine', '/images/hsr/Feixiao Figurine.webp', 3, 2),
-        ('Firefly Poster', 16.5, 'paper poster', '/images/hsr/Firefly Poster.jpg', 3, 4),
-        ('Herta Figurine', 23, 'made out of pvc', '/images/hsr/Herta Figurine.webp', 3, 2),
-        ('Herta Poster', 14, 'paper poster', '/images/hsr/Herta Poster 2.jpg', 3, 4),
-        ('HuoHuo Figurine', 40, 'Made with pvc', '/images/hsr/HuoHUo figurine.jpg', 3, 2),
-        ('HuoHuo key-chains set', 20, 'Arcylic key-chains', '/images/hsr/HuoHuo keychain set.jpg', 3, 3),
-        ('HuoHuo plush', 12, 'made with cotton', '/images/hsr/HuoHuo plush.jpg', 3, 1),
-        ('Honkai Star Rail plush set', 24, 'cotton plushies', '/images/hsr/Star Rail plush set.jpg', 3, 1),
-        ('Yunli Poster', 14.5, 'paper poster', '/images/hsr/Yunli Poster.jpg', 3, 4),
+        ('Honkai Star Rail plush set', 20, 'Cotton Plush set', '/images/hsr/4 plush set.webp', 12, 3, 1),
+        ('Feixiao Figurine', 27, 'pvc figurine', '/images/hsr/Feixiao Figurine.webp',11,  3, 2),
+        ('Firefly Poster', 16.5, 'paper poster', '/images/hsr/Firefly Poster.jpg', 10, 3, 4),
+        ('Herta Figurine', 23, 'made out of pvc', '/images/hsr/Herta Figurine.webp', 10, 3, 2),
+        ('Herta Poster', 14, 'paper poster', '/images/hsr/Herta Poster 2.jpg', 5,  3, 4),
+        ('HuoHuo Figurine', 40, 'Made with pvc', '/images/hsr/HuoHUo figurine.jpg', 8, 3, 2),
+        ('HuoHuo key-chains set', 20, 'Arcylic key-chains', '/images/hsr/HuoHuo keychain set.jpg',9, 3, 3),
+        ('HuoHuo plush', 12, 'made with cotton', '/images/hsr/HuoHuo plush.jpg',4,  3, 1),
+        ('Honkai Star Rail plush set', 24, 'cotton plushies', '/images/hsr/Star Rail plush set.jpg',12,  3, 1),
+        ('Yunli Poster', 14.5, 'paper poster', '/images/hsr/Yunli Poster.jpg',15, 3, 4),
 
     --Zenless Zone Zero--
-        ('Sibling Poster' , 10, 'paper poster', '/images/zzz/Wise Belle.webp', 4, 4),
-        ('Anby Figurine', 21, 'pvc doll', '/images/zzz/Anby Figurine.webp', 4, 2),
-        ('Belabog Industries Poster', 12.5, 'paper poster', '/images/zzz/Belabog poster.jpg', 4, 4),
-        ('Corin key-chains set', 18, 'key-chains set', '/images/zzz/Corin Key Chain set.jpg', 4, 3),
-        ('Ellen Joe Figurine', 27.5, 'pvc doll', '/images/zzz/Ellen Joe Figurine.jpg', 4, 2),
-        ('Rina Figurine', 26, 'pvc doll', '/images/zzz/Rina Figurine.webp', 4, 2),
-        ('Sibling Poster 2', 11, 'paper poster', '/images/zzz/Belle and Wise poster.jpeg', 4, 4),
-        ('Zenless Zone Zero key-chains set', 13, 'key-chains set', '/images/zzz/zzz keychains set.webp', 4, 3),
-        ('Zenless Zone Zero plushies', 18, 'plushie set', '/images/zzz/zzz plush.jpeg', 4, 1),
-        ('Ellen Plush', 16, 'plushie of cotton, attachable tail', '/images/zzz/Ellen Plush.webp', 4, 1);
+        ('Sibling Poster' , 10, 'paper poster', '/images/zzz/Wise Belle.webp', 10, 4, 4),
+        ('Anby Figurine', 21, 'pvc doll', '/images/zzz/Anby Figurine.webp',11, 4, 2),
+        ('Belabog Industries Poster', 12.5, 'paper poster', '/images/zzz/Belabog poster.jpg', 8, 4, 4),
+        ('Corin key-chains set', 18, 'key-chains set', '/images/zzz/Corin Key Chain set.jpg', 10, 4, 3),
+        ('Ellen Joe Figurine', 27.5, 'pvc doll', '/images/zzz/Ellen Joe Figurine.jpg', 12, 4, 2),
+        ('Rina Figurine', 26, 'pvc doll', '/images/zzz/Rina Figurine.webp', 5, 4, 2),
+        ('Sibling Poster 2', 11, 'paper poster', '/images/zzz/Belle and Wise poster.jpeg',18, 4, 4),
+        ('Zenless Zone Zero key-chains set', 13, 'key-chains set', '/images/zzz/zzz keychains set.webp', 6, 4, 3),
+        ('Zenless Zone Zero plushies', 18, 'plushie set', '/images/zzz/zzz plush.jpeg', 10, 4, 1),
+        ('Ellen Plush', 16, 'plushie of cotton, attachable tail', '/images/zzz/Ellen Plush.webp',11, 4, 1);
 
 INSERT INTO PRODUCT_GAME_CHARACTERS (PRODUCTS_ID, GAME_CHARACTERS_ID)
 VALUES
