@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface ProductRepository extends CrudRepository<Product, Integer> {
-    @Query("SELECT DISTINCT p FROM Product p " +
+    @Query("SELECT p FROM Product p " +
             "JOIN p.gameCharacters gc " +
             "WHERE p.game.title = :gameTitle AND " +
             "(:categoryId IS NULL OR p.category.id = :categoryId) AND " +
