@@ -36,18 +36,25 @@ public class HsrController {
     @GetMapping("/hsr")
     public String hsr(Model model,
                       @RequestParam(required = false) String searchTerm,
-                      @RequestParam (required = false) Integer categoryId, Integer outfitId, Integer characterId) {
+                      @RequestParam (required = false) Integer categoryId, Integer characterId, Integer outfitId) {
         final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm,
-                "Honkai Star Rail", categoryId, outfitId, characterId);
+                "Honkai Star Rail", categoryId, characterId, outfitId);
 
         final Iterable<Category> categories = categoryRepository.findAll();
         final Iterable<GameCharacter> gameCharacterList = gameCharacterRepository.findByGameId(3);
-        final Iterable<Outfit> outfits = outfitRepository.findAll();
+        Iterable<Outfit> outfits = (characterId != null) ?
+                outfitRepository.findByGameCharacter(characterId) :
+                outfitRepository.findAll();
 
         model.addAttribute("products", products);
         model.addAttribute("categories", categories);
         model.addAttribute("gameCharacters", gameCharacterList);
         model.addAttribute("outfits", outfits);
+
+        model.addAttribute("selectedCharacterId", characterId);
+        model.addAttribute("selectedOutfitId", outfitId);
+        model.addAttribute("selectedCategoryId", categoryId);
+
         model.addAttribute("activePage", "hsr");
         return "hsr";
     }

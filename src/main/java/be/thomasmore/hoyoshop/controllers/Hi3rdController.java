@@ -52,8 +52,11 @@ public class Hi3rdController {
         model.addAttribute("categories", categories);
         model.addAttribute("gameCharacters", gameCharacterList);
         model.addAttribute("outfits", outfits);
-        //model.addAttribute("selectedOutfit", outfitId);
+
         model.addAttribute("selectedCharacterId", characterId);
+        model.addAttribute("selectedOutfitId", outfitId);
+        model.addAttribute("selectedCategoryId", categoryId);
+
         model.addAttribute("activePage", "hi3rd");
         return "hi3rd";
     }

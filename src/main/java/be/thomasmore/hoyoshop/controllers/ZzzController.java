@@ -36,17 +36,24 @@ public class ZzzController {
     @GetMapping("/zzz")
     public String zzz(Model model,
                       @RequestParam(required = false) String searchTerm,
-                      @RequestParam (required = false) Integer categoryId, Integer outfitId, Integer characterId) {
+                      @RequestParam (required = false) Integer categoryId, Integer characterId, Integer outfitId) {
         final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm,
-                "Zenless Zone Zero", categoryId, outfitId, characterId);
+                "Zenless Zone Zero", categoryId, characterId, outfitId);
 
         final Iterable<Category> categories = categoryRepository.findAll();
         final Iterable<GameCharacter> gameCharacterList = gameCharacterRepository.findByGameId(4);
-        final Iterable<Outfit> outfits = outfitRepository.findAll();
+        Iterable<Outfit> outfits = (characterId != null) ?
+                outfitRepository.findByGameCharacter(characterId) :
+                outfitRepository.findAll();
         model.addAttribute("products", products);
         model.addAttribute("categories", categories);
         model.addAttribute("gameCharacters", gameCharacterList);
         model.addAttribute("outfits", outfits);
+
+        model.addAttribute("selectedCharacterId", characterId);
+        model.addAttribute("selectedOutfitId", outfitId);
+        model.addAttribute("selectedCategoryId", categoryId);
+
         model.addAttribute("activePage", "zzz");
         return "zzz";
     }

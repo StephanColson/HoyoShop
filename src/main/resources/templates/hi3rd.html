@@ -76,20 +76,21 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"/>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
-                            <label th:text="|Category|"/>
-                            <div>
-                                <select name="categoryId">
+                        <div class="row text-light">
+                            <div class="border mb-3 p-3">
+                                <h3 th:text="|Category|"/>
+                                <select class="form-select" name="categoryId">
                                     <option value="">All</option>
                                     <option th:each="category : ${categories}"
                                             th:value="${category.id}"
-                                            th:text="${category.type}"></option>
+                                            th:text="${category.type}"
+                                            th:selected="${selectedCategoryId != null and category.id == selectedCategoryId}"></option>
                                 </select>
                             </div>
 
-                            <label th:text="|Character|"/>
-                            <div>
-                                <select name="characterId" id="characterSelect">
+                            <div class="border mb-3 p-3">
+                                <h3 th:text="|Character|"/>
+                                <select class="form-select" name="characterId" id="characterSelect">
                                     <option value="">All</option>
                                     <option th:each="gameCharacter: ${gameCharacters}"
                                             th:value="${gameCharacter.id}"
@@ -99,21 +100,40 @@
                                 </select>
                             </div>
 
-                            <label th:text="|Outfit|"/>
-                            <div>
-                                <select name="outfitId">
+                            <div class="border mb-3 p-3">
+                                <h3 th:text="|Outfit|"/>
+                                <select class="form-select" name="outfitId">
                                     <option value="">All</option>
                                     <option th:each="outfit: ${outfits}"
                                             th:value="${outfit.id}"
                                             th:text="${outfit.name}"
-                                            th:selected="${outfitId != null and outfit.id == outfitId}">
+                                            th:selected="${selectedOutfitId != null and outfit.id == selectedOutfitId}">
                                     </option>
                                 </select>
                             </div>
 
-                            <label th:text="|Price|"/>
+                            <div class="border mb-3 p-3">
+                                <h3 class="border-bottom" th:text="|Price|"/>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">All pricing</label>
+                                </div>
 
-                            <!-- Use radio input (Maybe for Category or something else)-->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">lower than 15 &#8364;</label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">between 15 and 20 &#8364;</label>
+                                </div>
+
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="radio">
+                                    <label class="form-check-label">higher than 20 &#8364;</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -136,16 +156,14 @@
             const filterForm = document.getElementById("filterForm");
             const modal = new bootstrap.Modal(document.getElementById("hi3rdModal"));
 
-            // Auto-submit when a character is selected, but keep modal open
             characterSelect.addEventListener("change", function () {
-                localStorage.setItem("keepModalOpen", "true"); // Store modal state
-                filterForm.submit(); // Submit form
+                localStorage.setItem("keepModalOpen", "true");
+                filterForm.submit();
             });
 
-            // Check if modal should stay open after reload
             if (localStorage.getItem("keepModalOpen") === "true") {
-                modal.show(); // Open modal
-                localStorage.removeItem("keepModalOpen"); // Clear stored state
+                modal.show();
+                localStorage.removeItem("keepModalOpen");
             }
         });
     </script>
