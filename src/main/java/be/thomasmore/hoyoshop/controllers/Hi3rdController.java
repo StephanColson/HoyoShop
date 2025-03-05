@@ -38,10 +38,11 @@ public class Hi3rdController {
                         @RequestParam (required = false) String searchTerm,
                         @RequestParam (required = false) Integer categoryId,
                         @RequestParam (required = false) Integer characterId,
-                        @RequestParam (required = false) Integer outfitId)
+                        @RequestParam (required = false) Integer outfitId,
+                        @RequestParam (required = false) String priceFilter)
     {
         final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm,
-                "Honkai Impact 3rd", categoryId, characterId, outfitId);
+                "Honkai Impact 3rd", categoryId, characterId, outfitId, priceFilter);
         final Iterable<Category> categories = categoryRepository.findAll();
         final Iterable<GameCharacter> gameCharacterList = gameCharacterRepository.findByGameId(1);
         Iterable<Outfit> outfits = (characterId != null) ?
@@ -56,6 +57,7 @@ public class Hi3rdController {
         model.addAttribute("selectedCharacterId", characterId);
         model.addAttribute("selectedOutfitId", outfitId);
         model.addAttribute("selectedCategoryId", categoryId);
+        model.addAttribute("priceFilter", priceFilter);
 
         model.addAttribute("activePage", "hi3rd");
         return "hi3rd";

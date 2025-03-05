@@ -36,9 +36,10 @@ public class GiController {
     @GetMapping("/gi")
     public String gi(Model model,
                      @RequestParam (required = false) String searchTerm,
-                     @RequestParam (required = false) Integer categoryId, Integer characterId, Integer outfitId) {
+                     @RequestParam (required = false) Integer categoryId, Integer characterId, Integer outfitId,
+                     @RequestParam (required = false) String priceFilter) {
         final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm,
-                "Genshin Impact", categoryId, characterId, outfitId);
+                "Genshin Impact", categoryId, characterId, outfitId, priceFilter);
 
         final Iterable<Category> categories = categoryRepository.findAll();
         final Iterable<GameCharacter> gameCharacterList = gameCharacterRepository.findByGameId(2);
@@ -53,6 +54,7 @@ public class GiController {
         model.addAttribute("selectedCharacterId", characterId);
         model.addAttribute("selectedOutfitId", outfitId);
         model.addAttribute("selectedCategoryId", categoryId);
+        model.addAttribute("priceFilter", priceFilter);
 
         model.addAttribute("activePage", "gi");
         return "gi";

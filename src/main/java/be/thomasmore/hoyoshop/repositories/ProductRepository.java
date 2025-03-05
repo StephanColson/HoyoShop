@@ -15,6 +15,10 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
             "(:categoryId IS NULL OR p.category.id = :categoryId) AND " +
             "(:characterId IS NULL OR gc.id = :characterId) AND " +
             "(:outfitId IS NULL OR o.id = :outfitId) AND" +
+            "((:priceFilter IS NULL OR :priceFilter = '') OR " +
+            "(:priceFilter = 'low' AND p.price < 15) OR " +
+            "(:priceFilter = 'mid' AND p.price BETWEEN 15 AND 20) OR " +
+            "(:priceFilter = 'high' AND p.price > 20)) AND " +
             "(:searchTerm IS NULL OR :searchTerm = '' OR" +
             "(LOWER(p.description) LIKE LOWER(CONCAT('%', :searchTerm, '%')) OR " +
             "LOWER(p.category.type) LIKE LOWER(CONCAT('%', :searchTerm, '%')) OR " +
@@ -24,5 +28,6 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
                                      @Param("gameTitle") String gameTitle,
                                      @Param("categoryId") Integer categoryId,
                                      @Param("characterId") Integer characterId,
-                                     @Param("outfitId") Integer outfitId);
+                                     @Param("outfitId") Integer outfitId,
+                                     @Param("priceFilter") String priceFilter);
 }
