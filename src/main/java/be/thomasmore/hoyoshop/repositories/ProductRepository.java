@@ -10,10 +10,11 @@ import java.util.List;
 public interface ProductRepository extends CrudRepository<Product, Integer> {
     @Query("SELECT p FROM Product p " +
             "JOIN p.gameCharacters gc " +
+            "LEFT JOIN p.outfits o " +
             "WHERE p.game.title = :gameTitle AND " +
             "(:categoryId IS NULL OR p.category.id = :categoryId) AND " +
             "(:characterId IS NULL OR gc.id = :characterId) AND " +
-            "(:outfitId IS NULL OR EXISTS (SELECT o FROM Outfit o WHERE o.id = :outfitId)) AND" +
+            "(:outfitId IS NULL OR o.id = :outfitId) AND" +
             "(:searchTerm IS NULL OR :searchTerm = '' OR" +
             "(LOWER(p.description) LIKE LOWER(CONCAT('%', :searchTerm, '%')) OR " +
             "LOWER(p.category.type) LIKE LOWER(CONCAT('%', :searchTerm, '%')) OR " +

@@ -23,6 +23,9 @@ public class Product {
     private Category category;
 
     @ManyToMany(fetch = FetchType.LAZY)
+    private Collection<Outfit> outfits;
+
+    @ManyToMany(fetch = FetchType.LAZY)
     private Collection<GameCharacter> gameCharacters;
 
     public Collection<GameCharacter> getGameCharacters() {

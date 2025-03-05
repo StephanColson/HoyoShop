@@ -360,13 +360,13 @@ INSERT INTO outfit (name, image, GAME_CHARACTER_ID)
 VALUES
     --HI3rd--
         --Kiana Kaslana--
-        ('White Comet',
+/*1*/   ('White Comet',
          '/images/hi3rd/outfits/kianaKaslana/White_Comet.webp',1),
         ('Starless Rift',
          '/images/hi3rd/outfits/kianaKaslana/Starless_Rift.webp',1),
         ('Sunny Beach',
          '/images/hi3rd/outfits/kianaKaslana/Sunny_Beach.webp',1),
-        ('Prodigal Girl',
+/*4*/   ('Prodigal Girl',
          '/images/hi3rd/outfits/kianaKaslana/Prodigal_Girl.webp',1),
         ('Valkyrie Ranger',
          '/images/hi3rd/outfits/kianaKaslana/Valkyrie_Ranger.webp',1),
@@ -378,7 +378,7 @@ VALUES
          '/images/hi3rd/outfits/kianaKaslana/Void_Drifter.webp',1),
         ('Red Lictor',
          '/images/hi3rd/outfits/kianaKaslana/Red_Lictor.webp',1),
-        ('Peak Sync PS',
+/*10*/  ('Peak Sync PS',
          '/images/hi3rd/outfits/kianaKaslana/Peak_Sync_PS.webp',1),
         ('Radiant Blaze',
          '/images/hi3rd/outfits/kianaKaslana/Radiant_Blaze.webp',1),
@@ -398,7 +398,7 @@ VALUES
          '/images/hi3rd/outfits/kianaKaslana/Dark_Devourer.webp',1),
         ('Lemon Soda',
          '/images/hi3rd/outfits/kianaKaslana/Lemon_Soda.webp',1),
-        ('Bastet''s Secret',
+/*20*/  ('Bastet''s Secret',
          '/images/hi3rd/outfits/kianaKaslana/Bastets_Secret.webp',1),
         ('Herrscher of the Void',
          '/images/hi3rd/outfits/kianaKaslana/Herrscher_of_the_Void.webp',1),
@@ -424,7 +424,8 @@ VALUES
          '/images/hi3rd/outfits/kianaKaslana/Ba-Dum!_Fiery_Wishing_Star.webp',1),
 
         --Bronya Zaychik--
-        ('Valkyrie Chariot',
+
+/*32*/  ('Valkyrie Chariot',
          '/images/hi3rd/outfits/bronyaZaychik/Valkyrie_Chariot.webp',2),
         ('School Swimsuit',
          '/images/hi3rd/outfits/bronyaZaychik/School_Swimsuit.webp',2),
@@ -440,7 +441,7 @@ VALUES
          '/images/hi3rd/outfits/bronyaZaychik/Nightfall_Witch.webp',2),
         ('Yamabuki Armor',
          '/images/hi3rd/outfits/bronyaZaychik/Yamabuki_Armor.webp',2),
-        ('Candy Demon',
+/*40*/  ('Candy Demon',
          '/images/hi3rd/outfits/bronyaZaychik/Candy_Demon.webp',2),
         ('Helena''s Wings',
          '/images/hi3rd/outfits/bronyaZaychik/Helenas_Wings.webp',2),
@@ -460,7 +461,7 @@ VALUES
          '/images/hi3rd/outfits/bronyaZaychik/Techno_Beats.webp',2),
         ('Black Nucleus',
          '/images/hi3rd/outfits/bronyaZaychik/Black_Nucleus.webp',2),
-        ('Fleurs Du Mal',
+/*50*/  ('Fleurs Du Mal',
          '/images/hi3rd/outfits/bronyaZaychik/Fleurs_du_Mal.webp',2),
         ('Herrscher of Reason',
          '/images/hi3rd/outfits/bronyaZaychik/Herrscher_of_Reason.webp',2),
@@ -470,7 +471,7 @@ VALUES
          '/images/hi3rd/outfits/bronyaZaychik/Ultraviolet_Kinetik.webp',2),
         ('Magic Girl Bronya',
          '/images/hi3rd/outfits/bronyaZaychik/Magic_Girl_Bronya.webp',2),
-        ('Haxxor Bunny',
+/*55*/  ('Haxxor Bunny',
          '/images/hi3rd/outfits/bronyaZaychik/Haxxor_Bunny.webp',2),
         ('Old Times',
          '/images/hi3rd/outfits/bronyaZaychik/Old_Times.webp',2),
@@ -480,7 +481,7 @@ VALUES
          '/images/hi3rd/outfits/bronyaZaychik/Arc_City_Blues.webp',2),
         ('Silverwing: N-EX',
          '/images/hi3rd/outfits/bronyaZaychik/Silverwing_-_N-EX.webp',2),
-        ('Heart of the Night',
+/*60*/  ('Heart of the Night',
          '/images/hi3rd/outfits/bronyaZaychik/Heart_of_the_Night.webp',2),
         ('Neonized',
          '/images/hi3rd/outfits/bronyaZaychik/Neonized.webp',2),
@@ -492,7 +493,7 @@ VALUES
          '/images/hi3rd/outfits/bronyaZaychik/Seaside_Vibes.webp',2),
 
         --Raiden Mei--
-        ('Crimson Impulse',
+/*65*/  ('Crimson Impulse',
          '/images/hi3rd/outfits/raidenMei/Crimson_Impulse.webp',3),
         ('Azure',
          '/images/hi3rd/outfits/raidenMei/Azure.webp',3),
@@ -502,11 +503,11 @@ VALUES
          '/images/hi3rd/outfits/raidenMei/Gardenia.webp',3),
         ('Valkyrie Bladestrike',
          '/images/hi3rd/outfits/raidenMei/Valkyrie_Bladestrike.webp',3),
-        ('Blue Memories',
+/*70*/  ('Blue Memories',
          '/images/hi3rd/outfits/raidenMei/Blue_Memories.webp',3),
         ('Aeterna Purum',
          '/images/hi3rd/outfits/raidenMei/Aeterna_Purum.webp',3),
-        ('Striker Fulminata',
+/*72*/  ('Striker Fulminata',
          '/images/hi3rd/outfits/raidenMei/Striker_Fulminata.webp',3),
         ('Thunderbolt Drive',
          '/images/hi3rd/outfits/raidenMei/Thunderbolt_Drive.webp',3),
@@ -522,7 +523,7 @@ VALUES
          '/images/hi3rd/outfits/raidenMei/Orochi_Cuirass.webp',3),
         ('Lightning Empress',
          '/images/hi3rd/outfits/raidenMei/Lightning_Empress.webp',3),
-        ('Scorching Golden Thunder',
+/*80*/  ('Scorching Golden Thunder',
          '/images/hi3rd/outfits/raidenMei/Scorching_Golden_Thunder.webp',3),
         ('Aqua Chime',
          '/images/hi3rd/outfits/raidenMei/Aqua_Chime.webp',3),
@@ -530,7 +531,7 @@ VALUES
          '/images/hi3rd/outfits/raidenMei/Ultramarine_Octave.webp',3),
         ('Eventide Phantom',
          '/images/hi3rd/outfits/raidenMei/Eventide_Phantom.webp',3),
-        ('Herrscher of Thunder',
+/*84*/  ('Herrscher of Thunder',
          '/images/hi3rd/outfits/raidenMei/Herrscher_of_Thunder.webp',3),
         ('Aqueous Springtide',
          '/images/hi3rd/outfits/raidenMei/Aqueous_Springtide.webp',3),
@@ -542,7 +543,7 @@ VALUES
          '/images/hi3rd/outfits/raidenMei/Nocturne_Ablaze.webp',3),
         ('Herrscher of Origin',
          '/images/hi3rd/outfits/raidenMei/Herrscher_of_Origin.webp',3),
-        ('Crooning Tides',
+/*90*/  ('Crooning Tides',
          '/images/hi3rd/outfits/raidenMei/Crooning_Tides.webp',3),
 
         --Elysia--
@@ -556,19 +557,19 @@ VALUES
          '/images/hi3rd/outfits/elysia/Faded_Miss_Elf.webp',4),
         ('Herrscher of Ego',
          '/images/hi3rd/outfits/elysia/Herrscher_of_Human_-_Ego.webp',4),
-        ('Peachy Spring',
+/*96*/  ('Peachy Spring',
          '/images/hi3rd/outfits/elysia/Peachy_Spring.webp',4),
 
         --Herrscher of Sentience (Senti)--
-        ('Herrscher of Sentience',
+/*97*/  ('Herrscher of Sentience',
          '/images/hi3rd/outfits/senti/Herrscher_of_Sentience.webp',5),
         ('Ooh! Summer!',
          '/images/hi3rd/outfits/senti/Ooh!_Summer!.webp',5),
-        ('Turn Up the Music!',
+/*99*/  ('Turn Up the Music!',
          '/images/hi3rd/outfits/senti/Turn_Up_the_Music!.webp',5),
 
         --Griseo--
-        ('Starry Impression',
+/*100*/ ('Starry Impression',
          '/images/hi3rd/outfits/griseo/Starry_Impression.webp',6),
         ('Summer as a Painting',
          '/images/hi3rd/outfits/griseo/Summer_as_a_Painting.webp',6),
@@ -584,11 +585,11 @@ VALUES
         --Vill-V--
         ('Helical Contraption',
          '/images/hi3rd/outfits/vill-V/Helical_contraption.webp',7),
-        ('I''m the Storm',
+/*107*/ ('I''m the Storm',
          '/images/hi3rd/outfits/vill-V/I_Am_The_Storm.webp',7),
 
         --Mobius--
-        ('Infinite Ouroboros',
+/*108*/ ('Infinite Ouroboros',
          '/images/hi3rd/outfits/mobius/Infinite_Ouroboros.webp',8),
         ('Daughter of Corals',
          '/images/hi3rd/outfits/mobius/Daughter_of_Corals.webp',8),
@@ -596,7 +597,7 @@ VALUES
          '/images/hi3rd/outfits/mobius/Scorching_Gravel.webp',8),
 
         --Fu Hua--
-        ('Valkyrie Accipiter',
+/*111*/ ('Valkyrie Accipiter',
          '/images/hi3rd/outfits/fuHua/Valkyrie_Accipiter.webp',9),
         ('Blue Swallow',
          '/images/hi3rd/outfits/fuHua/Blue_Swallow.webp',9),
@@ -614,7 +615,7 @@ VALUES
          '/images/hi3rd/outfits/fuHua/Sword_and_Fire.webp',9),
         ('Night Squire',
          '/images/hi3rd/outfits/fuHua/Night_Squire.webp',9),
-        ('Rustic Noir',
+/*120*/ ('Rustic Noir',
          '/images/hi3rd/outfits/fuHua/Rustic_Noir.webp',9),
         ('Spring Traveler',
          '/images/hi3rd/outfits/fuHua/Spring_Traveler.webp',9),
@@ -634,13 +635,13 @@ VALUES
          '/images/hi3rd/outfits/fuHua/Cerulean_Court.webp',9),
         ('Taixuan Impression',
          '/images/hi3rd/outfits/fuHua/Taixuan_Impression.webp',9),
-        ('Fenghuang of Vicissitude',
+/*130*/ ('Fenghuang of Vicissitude',
          '/images/hi3rd/outfits/fuHua/Fenghuang_of_Vicissitude.webp',9),
         ('Crane of Taixuan',
          '/images/hi3rd/outfits/fuHua/Crane_of_Taixuan.webp',9),
 
         --Aponia--
-        ('Disciplinary Perdition',
+/*132*/ ('Disciplinary Perdition',
          '/images/hi3rd/outfits/aponia/Disciplinary_Perdition.webp',10),
         ('Mesmerizing Blue',
          '/images/hi3rd/outfits/aponia/Mesmerizing_Blue.webp',10),
@@ -660,7 +661,7 @@ VALUES
          '/images/hi3rd/outfits/yaeSakura/Sublime_Lotus.webp',11),
         ('Summer Sakura',
          '/images/hi3rd/outfits/yaeSakura/Sakura_Summer.webp',11),
-        ('Goushinnso Memento',
+/*141*/ ('Goushinnso Memento',
          '/images/hi3rd/outfits/yaeSakura/Goushinnso_Memento.webp',11),
         ('Blanc X: Ichijin',
          '/images/hi3rd/outfits/yaeSakura/Blanc_X_-_Ichijin.webp',11),
@@ -678,7 +679,7 @@ VALUES
          '/images/hi3rd/outfits/yaeSakura/Rising_Moon.webp',11),
         ('Mauve Cascade',
          '/images/hi3rd/outfits/yaeSakura/Mauve_Cascade.webp',11),
-        ('Darkbolt Jonin',
+/*150*/ ('Darkbolt Jonin',
          '/images/hi3rd/outfits/yaeSakura/Darkbolt_Jonin.webp',11),
         ('Peach Sanctuary',
          '/images/hi3rd/outfits/yaeSakura/Peach_Sanctuary.webp',11),
@@ -701,19 +702,19 @@ VALUES
 
     --GI--
         --Diluc--
-        ('Darknight Blaze',
+/*158*/ ('Darknight Blaze',
          '/images/gi/outfits/diluc/Darknight_Blaze.webp',16),
         ('Red Dead of Night',
          '/images/gi/outfits/diluc/Red_Dead_of_Night.webp',16),
 
         --Hu Tao--
-        ('Plum Blossom Bouquet',
+/*160*/ ('Plum Blossom Bouquet',
          '/images/gi/outfits/huTao/Plum_Blossom_Bouquet.webp',15),
         ('Cherries Snow-Laden',
          '/images/gi/outfits/huTao/Cherries_Snow-Laden.webp',15),
 
         --Fischl--
-        ('Dunkelnacht Sakrament',
+/*162*/ ('Dunkelnacht Sakrament',
          '/images/gi/outfits/fischl/Dunkelnacht_Sakrament.webp',21),
         ('Ein Immernachtstraum',
          '/images/gi/outfits/fischl/Ein_Immernachtstraum.webp',21),
@@ -722,13 +723,13 @@ VALUES
 
     --ZZZ--
         --Nicole Demara--
-        ('Lil Sassy',
+/*164*/ ('Lil Sassy',
          '/images/zzz/outfits/nicoleDemara/Lil_Sassy.webp',39),
         ('Cunning Cutie',
          '/images/zzz/outfits/nicoleDemara/Cunning_Cutie.webp',39),
 
         --Ellen Joe--
-        ('Ellen Scissorhands',
+/*166*/ ('Ellen Scissorhands',
          '/images/zzz/outfits/ellenJoe/Ellen_Scissorhands.webp',41),
         ('On Campus',
          '/images/zzz/outfits/ellenJoe/On_Campus.webp',41);
@@ -787,7 +788,7 @@ VALUES
 INSERT INTO PRODUCT_GAME_CHARACTERS (PRODUCTS_ID, GAME_CHARACTERS_ID)
 VALUES
     --Honkai Impact 3rd--
-        (1, 1),
+/*1*/   (1, 1),
         (1, 2),
         (1, 3),
         (2, 6),
@@ -872,3 +873,42 @@ VALUES
         (39, 43),
         (39, 44),
         (40, 41);
+
+INSERT INTO PRODUCT_OUTFITS (PRODUCTS_ID, OUTFITS_ID)
+VALUES
+    --Honkai Impact 3RD--
+    (1,8),
+    (1,42),
+    (1,72),
+    (2,100),
+    (3,29),
+    (4,21),
+    (5,55),
+    (5,97),
+    (5,111),
+    (5,91),
+    (5,75),
+    (5,106),
+    (6,4),
+    (7,108),
+    (8,132),
+    (8,106),
+    (8,141),
+    (8,124),
+    (9,84),
+    (10,84),
+
+    --Genshin Impact--
+    (14, 158),
+    (15, 162),
+    (16, 162),
+    (19, 160),
+
+    --Zenless Zone Zero--
+    (35, 166),
+    (38, 166),
+    (38, 164),
+    (39, 166),
+    (39, 164),
+    (40, 166);
+

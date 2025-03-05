@@ -2,6 +2,8 @@ package be.thomasmore.hoyoshop.models;
 
 import jakarta.persistence.*;
 
+import java.util.Collection;
+
 @Entity
 public class Outfit {
     @Id
@@ -12,7 +14,6 @@ public class Outfit {
 
     @ManyToOne
     private GameCharacter gameCharacter;
-
 
     public Integer getId() {
         return id;
@@ -44,5 +45,16 @@ public class Outfit {
 
     public void setGameCharacter(GameCharacter gameCharacter) {
         this.gameCharacter = gameCharacter;
+    }
+
+    @ManyToMany(mappedBy = "outfits")
+    private Collection<Product> products;
+
+    public Collection<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(Collection<Product> products) {
+        this.products = products;
     }
 }
