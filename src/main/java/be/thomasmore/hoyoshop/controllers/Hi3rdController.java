@@ -47,7 +47,7 @@ public class Hi3rdController {
         final Iterable<GameCharacter> gameCharacterList = gameCharacterRepository.findByGameId(1);
         Iterable<Outfit> outfits = (characterId != null) ?
                 outfitRepository.findByGameCharacter(characterId) :
-                outfitRepository.findAll();
+                outfitRepository.findByGameId(1);
 
         model.addAttribute("products", products);
         model.addAttribute("categories", categories);

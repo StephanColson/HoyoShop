@@ -45,7 +45,7 @@ public class GiController {
         final Iterable<GameCharacter> gameCharacterList = gameCharacterRepository.findByGameId(2);
         Iterable<Outfit> outfits = (characterId != null) ?
                 outfitRepository.findByGameCharacter(characterId) :
-                outfitRepository.findAll();
+                outfitRepository.findByGameId(2);
         model.addAttribute("products", products);
         model.addAttribute("categories", categories);
         model.addAttribute("gameCharacters", gameCharacterList);

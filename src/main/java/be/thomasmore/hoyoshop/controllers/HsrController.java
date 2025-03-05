@@ -45,7 +45,7 @@ public class HsrController {
         final Iterable<GameCharacter> gameCharacterList = gameCharacterRepository.findByGameId(3);
         Iterable<Outfit> outfits = (characterId != null) ?
                 outfitRepository.findByGameCharacter(characterId) :
-                outfitRepository.findAll();
+                outfitRepository.findByGameId(3);
 
         model.addAttribute("products", products);
         model.addAttribute("categories", categories);

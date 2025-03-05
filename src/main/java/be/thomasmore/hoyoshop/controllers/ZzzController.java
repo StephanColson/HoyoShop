@@ -45,7 +45,7 @@ public class ZzzController {
         final Iterable<GameCharacter> gameCharacterList = gameCharacterRepository.findByGameId(4);
         Iterable<Outfit> outfits = (characterId != null) ?
                 outfitRepository.findByGameCharacter(characterId) :
-                outfitRepository.findAll();
+                outfitRepository.findByGameId(4);
         model.addAttribute("products", products);
         model.addAttribute("categories", categories);
         model.addAttribute("gameCharacters", gameCharacterList);
