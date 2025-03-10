@@ -26,6 +26,16 @@
             <div>
                 <p th:text="*{description}">description</p>
             </div>
+            <div>
+                <p th:text="|*{price} euro|"/>
+            </div>
+            <div th:if="*{startDate != null and endDate != null}">
+                <h3 th:text="|Limited Offer!|"/>
+                <div>
+                    <p th:text="|From: *{#temporals.format(startDate, 'dd/MM/yyyy (HH:mm:ss)')}|"></p>
+                    <p th:text="|To: *{#temporals.format(endDate, 'dd/MM/yyyy (HH:mm:ss)')}|"></p>
+                </div>
+            </div>
         </div>
 
         <div class="row">
