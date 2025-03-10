@@ -1,9 +1,12 @@
 package be.thomasmore.hoyoshop.controllers.admin;
 
 import be.thomasmore.hoyoshop.models.Product;
+import be.thomasmore.hoyoshop.repositories.GameCharacterRepository;
+import be.thomasmore.hoyoshop.repositories.OutfitRepository;
 import be.thomasmore.hoyoshop.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -14,6 +17,12 @@ public class ProductEditController {
 
     @Autowired
     private ProductRepository productRepository;
+
+    @Autowired
+    private GameCharacterRepository gameCharacterRepository;
+
+    @Autowired
+    private OutfitRepository outfitRepository;
 
     @ModelAttribute("product")
     public Product findProduct(@PathVariable (required = false) int id) {
@@ -26,7 +35,8 @@ public class ProductEditController {
     }
 
     @GetMapping("/hi3rdedit/{id}")
-    public String hi3rd(@PathVariable int id) {
+    public String hi3rd(@PathVariable int id, Model model) {
+        model.addAttribute("GameCharacters", gameCharacterRepository.findByGameId(1));
         return "/admin/hi3rdedit";
     }
 
@@ -37,7 +47,8 @@ public class ProductEditController {
     }
 
     @GetMapping("/giedit/{id}")
-    public String gi(@PathVariable int id) {
+    public String gi(@PathVariable int id, Model model) {
+        model.addAttribute("GameCharacters", gameCharacterRepository.findByGameId(2));
         return "/admin/giedit";
     }
 
@@ -48,7 +59,8 @@ public class ProductEditController {
     }
 
     @GetMapping("/hsredit/{id}")
-    public String hsr(@PathVariable int id) {
+    public String hsr(@PathVariable int id, Model model) {
+        model.addAttribute("GameCharacters", gameCharacterRepository.findByGameId(3));
         return "/admin/hsredit";
     }
 
@@ -59,7 +71,8 @@ public class ProductEditController {
     }
 
     @GetMapping("/zzzedit/{id}")
-    public String zzz(@PathVariable int id) {
+    public String zzz(@PathVariable int id, Model model) {
+        model.addAttribute("GameCharacters", gameCharacterRepository.findByGameId(4));
         return "/admin/zzzedit";
     }
 
