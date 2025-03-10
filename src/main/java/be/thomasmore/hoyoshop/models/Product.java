@@ -2,6 +2,7 @@ package be.thomasmore.hoyoshop.models;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDateTime;
 import java.util.Collection;
 
 @Entity
@@ -15,6 +16,9 @@ public class Product {
     private String description;
     //@Transient -> doesn't store info on the database
     private int quantity;
+
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Game game;
