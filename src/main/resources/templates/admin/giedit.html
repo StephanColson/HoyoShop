@@ -1,10 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <title>HI3rd Details</title>
 </head>
 <body>
+<h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
 
+<main class="container mt-2" th:object="${product}" th:if="${product}">
+    <form th:action="@{|/admin/giedit/*{id}|}" method="post">
+        <div>
+            <div class="text-center">
+                <img th:src="*{image}" class="img-fluid" style="max-width: 100%">
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <label for="ProductName" th:text="|Change Product Name?|"/>
+                <input class="form-control" type="text" id="ProductName" name="name" th:field="*{name}">
+            </div>
+            <div>
+                <label for="ProductDescription" th:text="|Change Product Description?|"/>
+                <textarea class="form-control" id="ProductDescription" name="description" th:field="*{description}"></textarea>
+            </div>
+            <div>
+                <label for="ProductPrice" th:text="|Change Product Price?|"/>
+                <input class="form-control" id="ProductPrice" name="price" type="number" th:field="*{price}">
+            </div>
+        </div>
+
+        <div class="d-flex">
+            <a class="btn btn-warning" th:href="@{|../../giDetails/*{id}|}" th:text="|Cancel|"/>
+            <button class="btn btn-success ms-2" type="submit" th:text="Save"></button>
+        </div>
+    </form>
+</main>
+
+<p th:replace="~{fragments/footer :: footer}"/>
 </body>
 </html>
