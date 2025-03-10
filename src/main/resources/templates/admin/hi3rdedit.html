@@ -34,11 +34,11 @@
             </div>
         </div>
 
-        <div>
-            <label for="CharacterName" th:text="|Swap Character?|"/>
+        <label for="CharacterName" th:text="|Swap Character(s)?|"/>
+        <div th:each="character, stat : ${product.gameCharacters}">
             <select class="form-control" id="CharacterName" th:field="*{gameCharacters}">
                 <option th:each="GameCharacter : ${GameCharacters}" th:value="${GameCharacter.id}"
-                th:text="${GameCharacter.name}" th:selected="${GameCharacter}"></option>
+                th:text="${GameCharacter.name}" th:selected="${GameCharacter.id == character.id}"></option>
             </select>
         </div>
 
