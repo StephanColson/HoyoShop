@@ -12,7 +12,7 @@
 <h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
 
 <main class="container mt-2" th:object="${product}" th:if="${product}">
-    <form th:action="@{|/admin/hi3rdedit/*{id}|}" method="post">
+    <form th:action="@{|/admin/hi3rdedit/*{id}|}" method="post" enctype="multipart/form-data">
         <div>
             <div class="text-center">
                 <img th:src="*{image}" class="img-fluid" style="max-width: 100%">
@@ -20,6 +20,10 @@
         </div>
 
         <div class="row">
+            <div>
+                <label for="image" th:text="|Change Image?|"/>
+                <input class="form-control" id="image" name="imageFile" type="file">
+            </div>
             <div>
                 <label for="ProductName" th:text="|Change Product Name?|"/>
                 <input class="form-control" type="text" id="ProductName" name="name" th:field="*{name}">
