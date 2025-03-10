@@ -32,6 +32,17 @@
                 <label for="ProductPrice" th:text="|Change Product Price?|"/>
                 <input class="form-control" id="ProductPrice" name="price" type="number" th:field="*{price}">
             </div>
+            <div th:if="*{startDate != null and endDate != null}">
+                <label th:text="|Change Limited Offer Date?|"/>
+                <div>
+                    <label for="startDate" th:text="|From: |"/>
+                    <input id="startDate" class="form-control" type="datetime-local" name="startDate" th:value="*{startDate}">
+                </div>
+                <div>
+                    <label for="endDate" th:text="|To: |"/>
+                    <input id="endDate" class="form-control" type="datetime-local" name="endDate" th:value="*{endDate}">
+                </div>
+            </div>
         </div>
 
         <label for="CharacterName" th:text="|Swap Character(s)?|"/>
