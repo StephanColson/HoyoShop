@@ -44,7 +44,8 @@ public class SecurityConfiguration {
         http.authorizeHttpRequests(auth -> auth
                 .requestMatchers(mvcMatcherBuilder.pattern("/admin/**")).hasAuthority("ADMIN")
                 .anyRequest().permitAll());
-        http.formLogin(Customizer.withDefaults());
+        http.formLogin(form -> form.loginPage("/user/login").permitAll());
+        http.logout(form -> form.logoutUrl("/user/logout").permitAll());
         http.csrf(csrf -> csrf.ignoringRequestMatchers(toH2Console()));
         http.headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::sameOrigin));
         return http.build();

@@ -26,10 +26,10 @@
                 <span sec:authentication="name"></span>
             </div>
             <div sec:authorize="!isAuthenticated()">
-                <a class="btn btn-outline-primary m-1" th:href="@{|/login|}">Login</a>
+                <a class="btn btn-outline-primary m-1" th:href="@{|/user/login|}">Login</a>
             </div>
             <div sec:authorize="isAuthenticated()">
-                <a class="btn btn-outline-info m-1" th:href="@{|/logout|}">Logout</a>
+                <a class="btn btn-outline-info m-1" th:href="@{|/user/logout|}">Logout</a>
             </div>
         </div>
     </navbar>

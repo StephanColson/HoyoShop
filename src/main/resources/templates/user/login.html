@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <title>Game Details</title>
+</head>
+<body>
+<main>
+    <form class="text-center row d-flex justify-content-center" th:action="@{/user/login}" method="post">
+        <div class="border shadow-lg rounded-3 bg-success col-6 m-3">
+            <div class="m-3 p-2">
+                <h2 class="text-light">Login?</h2>
+                <div>
+                    <input class="form-control m-2" type="text" id="name" name="username" placeholder="username">
+                </div>
+                <div>
+                    <input class="form-control m-2" type="password" id="password" name="password" placeholder="password">
+                </div>
+            </div>
+
+            <div class="m-2">
+                <input class="btn btn-primary" type="submit" value="login"/>
+               <!-- <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-danger">Maybe?</a> -->
+                <a th:href="@{/home}" class="btn btn-warning">cancel</a>
+            </div>
+        </div>
+    </form>
+</main>
+</body>
+</html>
