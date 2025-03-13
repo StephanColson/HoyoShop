@@ -42,7 +42,7 @@ public class SecurityConfiguration {
                 new MvcRequestMatcher.Builder(introspector);
 
         http.authorizeHttpRequests(auth -> auth
-                .requestMatchers(mvcMatcherBuilder.pattern("/admin/**")).authenticated()
+                .requestMatchers(mvcMatcherBuilder.pattern("/admin/**")).hasAuthority("ADMIN")
                 .anyRequest().permitAll());
         http.formLogin(Customizer.withDefaults());
         http.csrf(csrf -> csrf.ignoringRequestMatchers(toH2Console()));

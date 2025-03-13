@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -13,7 +14,7 @@
 
     <main class="container" th:object="${product}">
         <div class="row">
-            <div class="d-flex justify-content-end m-2">
+            <div class="d-flex justify-content-end m-2" sec:authorize="hasAuthority('ADMIN')">
                 <a class="btn btn-info" th:href="@{|/admin/giedit/*{id}|}" th:text="|Edit|"></a>
             </div>
             <div class="text-center">
