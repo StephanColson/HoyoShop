@@ -1,6 +1,7 @@
 package be.thomasmore.hoyoshop.models;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
@@ -10,6 +11,7 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @NotBlank
     private String name;
     private String image;
     private double price;

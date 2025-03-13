@@ -4,9 +4,11 @@ import be.thomasmore.hoyoshop.models.Product;
 import be.thomasmore.hoyoshop.repositories.GameCharacterRepository;
 import be.thomasmore.hoyoshop.repositories.OutfitRepository;
 import be.thomasmore.hoyoshop.repositories.ProductRepository;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -46,7 +48,11 @@ public class ProductEditController {
     }
 
     @PostMapping("/hi3rdedit/{id}")
-    public String hi3rdeidt(@PathVariable int id, Product product, MultipartFile imageFile) {
+    public String hi3rdeidt(@PathVariable int id, @Valid Product product, BindingResult bindingResult, MultipartFile imageFile) {
+        if(bindingResult.hasErrors()) {
+            return "/admin/hi3rdedit";
+        }
+
         if (!imageFile.isEmpty()) {
             String imagePath = saveImage(imageFile);
             if (imagePath != null) {

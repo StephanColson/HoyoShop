@@ -20,13 +20,14 @@
         </div>
 
         <div class="row">
+            <div th:if="${#fields.hasErrors('*')}">Error - Data not saved</div>
             <div>
                 <label for="image" th:text="|Change Image?|"/>
                 <input class="form-control" id="image" name="imageFile" type="file">
             </div>
             <div>
                 <label for="ProductName" th:text="|Change Product Name?|"/>
-                <input class="form-control" type="text" id="ProductName" name="name" th:field="*{name}">
+                <input class="form-control" type="text" id="ProductName" name="name" th:field="*{name}" th:errorclass="is-invalid">
             </div>
             <div>
                 <label for="ProductDescription" th:text="|Change Product Description?|"/>
