@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -20,8 +21,16 @@
             <a class="btn" th:classappend="${activePage == 'cart' ? 'text-primary' : 'text-light'}" th:href="@{/cart}">Cart</a>
         </div>
         <div class="d-flex">
-            <a class="btn btn-outline-primary m-1">Login</a>
-            <a class="btn btn-outline-info m-1">Sign Up</a>
+            <div class="navbar-text me-2 text-light">
+                <span sec:authorize="isAuthenticated()">logged in as</span>
+                <span sec:authentication="name"></span>
+            </div>
+            <div sec:authorize="!isAuthenticated()">
+                <a class="btn btn-outline-primary m-1" th:href="@{|/login|}">Login</a>
+            </div>
+            <div sec:authorize="isAuthenticated()">
+                <a class="btn btn-outline-info m-1" th:href="@{|/logout|}">Logout</a>
+            </div>
         </div>
     </navbar>
 </div>
