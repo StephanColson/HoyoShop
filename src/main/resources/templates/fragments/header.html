@@ -18,7 +18,7 @@
             <a class="btn" th:classappend="${activePage == 'gi' ? 'text-primary' : 'text-light'}" th:href="@{/gi}">GI</a>
             <a class="btn" th:classappend="${activePage == 'hsr' ? 'text-primary' : 'text-light'}" th:href="@{/hsr}">HSR</a>
             <a class="btn" th:classappend="${activePage == 'zzz' ? 'text-primary' : 'text-light'}" th:href="@{/zzz}">ZZZ</a>
-            <a class="btn" th:classappend="${activePage == 'cart' ? 'text-primary' : 'text-light'}" th:href="@{/cart}">Cart</a>
+            <a sec:authorize="isAuthenticated()" class="btn" th:classappend="${activePage == 'cart' ? 'text-primary' : 'text-light'}" th:href="@{/cart}">Cart</a>
         </div>
         <div class="d-flex">
             <div class="navbar-text me-2 text-light">

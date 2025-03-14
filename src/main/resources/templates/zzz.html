@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -17,7 +18,14 @@
 <body>
     <h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
     <main class="container">
-        <h2 class="text-light text-center m-3">Logged in as Phaethon, welcome back!</h2>
+
+        <div sec:authorize="isAuthenticated()">
+            <h2 class="text-light text-center m-3">Logged in as Phaethon, welcome back!</h2>
+        </div>
+
+        <div sec:authorize="!isAuthenticated()">
+            <h3 class="text-light text-center m-3">Need to be logged in to buy products</h3>
+        </div>
 
         <form th:action="@{/zzz}">
             <div class="row">
@@ -47,7 +55,7 @@
                         <div class="card-footer text-danger">
                             <p th:text="|*{price} Euro|"/>
                             <div class="d-flex justify-content-between">
-                                <form th:action="@{/cart/add}" method="post">
+                                <form th:action="@{/cart/add}" method="post" sec:authorize="isAuthenticated()">
                                     <input type="hidden" name="productId" th:value="*{id}">
                                     <input type="hidden" name="productName" th:value="*{name}">
                                     <input type="hidden" name="productPrice" th:value="*{price}">

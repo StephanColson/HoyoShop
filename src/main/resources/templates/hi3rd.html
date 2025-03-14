@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -19,7 +20,13 @@
 
 <main class="container">
 
-    <h2 class="text-light text-center m-3">Captain on brig, welcome to Honkai Impact 3rd!</h2>
+    <div sec:authorize="isAuthenticated()">
+        <h2 class="text-light text-center m-3">Captain on brig, welcome to Honkai Impact 3rd!</h2>
+    </div>
+
+    <div sec:authorize="!isAuthenticated()">
+        <h3 class="text-light text-center m-3">Need to be logged in to buy products</h3>
+    </div>
 
     <form th:action="@{/hi3rd}">
         <div class="row">
@@ -38,26 +45,27 @@
             data-bs-target="#hi3rdModal">Filters
     </button>
 
-
-    <div class="row">
-        <div th:each="product : ${products}" th:object="${product}" class="col-lg-4 col-md-4 col-6 my-2">
-            <div class="col-lg-12">
-                <div class="card bg-dark-subtle">
-                    <img th:src="*{image}" class="card-img-top img-fluid">
-                    <div class="card-body">
-                        <h4 class="card-title text-danger" th:text="*{name}"/>
-                        <p class="card-text text-primary" th:text="*{description}"/>
-                    </div>
-                    <div class="card-footer text-danger">
-                        <p th:text="|*{price} Euro|"/>
-                        <div class="d-flex justify-content-between">
-                            <form th:action="@{/cart/add}" method="post">
-                                <input type="hidden" name="productId" th:value="*{id}">
-                                <input type="hidden" name="productName" th:value="*{name}">
-                                <input type="hidden" name="productPrice" th:value="*{price}">
-                                <button type="submit" class="btn bg-danger text-light-emphasis">Buy</button>
-                            </form>
-                            <a class="btn bg-info text-light-emphasis" th:href="@{|/hi3rdDetails/*{id}|}">Details</a>
+    <div class="card-group">
+        <div class="row">
+            <div th:each="product : ${products}" th:object="${product}" class="col-lg-4 col-md-4 col-6 my-2">
+                <div class="col-lg-12">
+                    <div class="card bg-dark-subtle">
+                        <img th:src="*{image}" class="card-img-top img-fluid object-fit-contain">
+                        <div class="card-body">
+                            <h4 class="card-title text-danger" th:text="*{name}"/>
+                            <p class="card-text text-primary" th:text="*{description}"/>
+                        </div>
+                        <div class="card-footer text-danger">
+                            <p th:text="|*{price} Euro|"/>
+                            <div class="d-flex justify-content-between">
+                                <form th:action="@{/cart/add}" method="post" sec:authorize="isAuthenticated()">
+                                    <input type="hidden" name="productId" th:value="*{id}">
+                                    <input type="hidden" name="productName" th:value="*{name}">
+                                    <input type="hidden" name="productPrice" th:value="*{price}">
+                                    <button type="submit" class="btn bg-danger text-light-emphasis">Buy</button>
+                                </form>
+                                <a class="btn bg-info text-light-emphasis" th:href="@{|/hi3rdDetails/*{id}|}">Details</a>
+                            </div>
                         </div>
                     </div>
                 </div>
