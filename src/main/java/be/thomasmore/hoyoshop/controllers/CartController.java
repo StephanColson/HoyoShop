@@ -68,6 +68,30 @@ public class CartController {
         return "redirect:/cart";
     }
 
+    @PostMapping("/remove")
+    public String removeFromCart(@RequestParam String productName, HttpSession session) {
+        List<Product> cart = (List<Product>) session.getAttribute("cart");
+        if (cart == null) {
+            return "redirect:/cart";
+        }
+
+        cart.removeIf(product -> {
+            if (product.getName().equals(productName)) {
+                int quantity = product.getQuantity();
+                if (quantity > 1) {
+                    product.setQuantity(quantity - 1);
+                    return false;
+                }
+                return true;
+            }
+            return false;
+        });
+
+        session.setAttribute("cart", cart);
+        return "redirect:/cart";
+    }
+
+
 
     @PostMapping("/clear")
     public String clearCart(HttpSession session) {

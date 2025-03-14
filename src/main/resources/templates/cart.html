@@ -25,11 +25,16 @@
             <td th:text="${item.name}"></td>
             <td th:text="|${item.price} Euro|"></td>
             <td>
-                <form class="d-inline">
+                <form th:action="@{/cart/remove}" method="post" class="d-inline">
+                    <input type="hidden" name="productName" th:value="${item.name}"/>
                     <button class="btn btn-outline-light" th:text="|-|"/>
                 </form>
+
                 <span class="m-1" th:text="${item.quantity}"></span>
-                <form class="d-inline">
+
+                <form th:action="@{/cart/add}" method="post" class="d-inline">
+                    <input type="hidden" name="productName" th:value="${item.name}"/>
+                    <input type="hidden" name="productPrice" th:value="${item.price}"/>
                     <button class="btn btn-outline-light" th:text="|+|"/>
                 </form>
             </td>
