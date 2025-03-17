@@ -1,9 +1,7 @@
 package be.thomasmore.hoyoshop.controllers.admin;
 
 import be.thomasmore.hoyoshop.models.Product;
-import be.thomasmore.hoyoshop.repositories.GameCharacterRepository;
-import be.thomasmore.hoyoshop.repositories.OutfitRepository;
-import be.thomasmore.hoyoshop.repositories.ProductRepository;
+import be.thomasmore.hoyoshop.repositories.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,8 +29,17 @@ public class ProductEditController {
     @Autowired
     private OutfitRepository outfitRepository;
 
+    @Autowired
+    private GameRepository gameRepository;
+    @Autowired
+    private CategoryRepository categoryRepository;
+
     @ModelAttribute("product")
-    public Product findProduct(@PathVariable (required = false) int id) {
+    public Product findProduct(@PathVariable (required = false) Integer id) {
+
+        if (id == null) {
+            return new Product();
+        }
 
         Optional<Product> optionalProduct = productRepository.findById(id);
         if (optionalProduct.isPresent()) {
@@ -116,6 +123,22 @@ public class ProductEditController {
         productRepository.save(product);
         return "redirect:/zzzDetails/" + id;
     }
+
+    @GetMapping("/newproduct")
+    public String newProduct(Model model) {
+        model.addAttribute("product", new Product());
+        model.addAttribute("games", gameRepository.findAll());
+        model.addAttribute("categories", categoryRepository.findAll());
+        model.addAttribute("gameCharacters", gameCharacterRepository.findAll());
+        return "/admin/newproduct";
+    }
+
+    @PostMapping("/newproduct")
+    public String newProductPost(@ModelAttribute("product") Product product) {
+        productRepository.save(product);
+        return "redirect:/home";
+    }
+
 
     private String saveImage(MultipartFile imageFile) {
         String fileName = imageFile.getOriginalFilename();

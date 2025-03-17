@@ -11,7 +11,7 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
     @Query("SELECT p FROM Product p " +
             "JOIN p.gameCharacters gc " +
             "LEFT JOIN p.outfits o " +
-            "WHERE p.game.title = :gameTitle AND " +
+            "WHERE p.game.id = :gameID AND " +
             "(:categoryId IS NULL OR p.category.id = :categoryId) AND " +
             "(:characterId IS NULL OR gc.id = :characterId) AND " +
             "(:outfitId IS NULL OR o.id = :outfitId) AND" +
@@ -25,7 +25,7 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
             "LOWER(p.name) LIKE LOWER(CONCAT('%', :searchTerm, '%'))))")
 
     List<Product> findBySearchFilter(@Param("searchTerm") String searchTerm,
-                                     @Param("gameTitle") String gameTitle,
+                                     @Param("gameID") Integer gameID,
                                      @Param("categoryId") Integer categoryId,
                                      @Param("characterId") Integer characterId,
                                      @Param("outfitId") Integer outfitId,

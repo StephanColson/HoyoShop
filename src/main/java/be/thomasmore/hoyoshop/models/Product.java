@@ -105,4 +105,28 @@ public class Product {
     public void setEndDate(LocalDateTime endDate) {
         this.endDate = endDate;
     }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public Collection<Outfit> getOutfits() {
+        return outfits;
+    }
+
+    public void setOutfits(Collection<Outfit> outfits) {
+        this.outfits = outfits;
+    }
 }

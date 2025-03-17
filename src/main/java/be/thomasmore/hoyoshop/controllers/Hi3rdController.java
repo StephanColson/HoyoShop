@@ -41,8 +41,7 @@ public class Hi3rdController {
                         @RequestParam (required = false) Integer outfitId,
                         @RequestParam (required = false) String priceFilter)
     {
-        final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm,
-                "Honkai Impact 3rd", categoryId, characterId, outfitId, priceFilter);
+        final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm, 1, categoryId, characterId, outfitId, priceFilter);
         final Iterable<Category> categories = categoryRepository.findAll();
         final Iterable<GameCharacter> gameCharacterList = gameCharacterRepository.findByGameId(1);
         Iterable<Outfit> outfits = (characterId != null) ?

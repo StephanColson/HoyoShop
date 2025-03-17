@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <title>HI3rd Details</title>
+</head>
+<body>
+<h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
+<main class="container mt-2" th:object="${product}" th:if="${product}">
+    <form th:action="@{/admin/newproduct}" method="post">
+        <div class="row">
+            <div th:if="${#fields.hasErrors('*')}">Error - Data not saved</div>
+            <div>
+                <label for="game">Game</label>
+                <select class="form-select" th:field="*{game}" id="game">
+                    <option th:each="game : ${games}" th:value="${game.id}" th:text="${game.title}"></option>
+                </select>
+            </div>
+            <div>
+                <label for="category">Game</label>
+                <select class="form-select" th:field="*{category}" id="category">
+                    <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.type}"></option>
+                </select>
+            </div>
+            <!--
+            <div>
+                <label for="image" th:text="|Add Image?|"/>
+                <input class="form-control" id="image" name="imageFile" type="file">
+            </div>
+            -->
+            <div>
+                <label for="ProductName" th:text="|Product Name?|"/>
+                <input class="form-control" type="text" id="ProductName" name="name" th:field="*{name}" th:errorclass="is-invalid">
+            </div>
+            <div>
+                <label for="ProductDescription" th:text="|Product Description?|"/>
+                <textarea class="form-control" id="ProductDescription" name="description" th:field="*{description}"></textarea>
+            </div>
+            <div>
+                <label for="gameCharacters" th:text="|Game Characters?|"></label>
+                <select multiple class="form-select" th:field="*{gameCharacters}" id="gameCharacters">
+                    <option th:each="gameCharacter : ${gameCharacters}" th:value="${gameCharacter.id}"
+                            th:text="${gameCharacter.name}"></option>
+                </select>
+            </div>
+            <div>
+                <label for="ProductPrice" th:text="|Product Price?|"/>
+                <input class="form-control" id="ProductPrice" name="price" type="number" th:field="*{price}">
+            </div>
+
+            <div>
+                <label th:text="|Limited Offer Date?|"/>
+                <div>
+                    <label for="startDate" th:text="|From: |"/>
+                    <input id="startDate" class="form-control" type="datetime-local" name="startDate" th:value="*{startDate}">
+                </div>
+                <div>
+                    <label for="endDate" th:text="|To: |"/>
+                    <input id="endDate" class="form-control" type="datetime-local" name="endDate" th:value="*{endDate}">
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex mt-3">
+            <a class="btn btn-warning" th:href="@{/}" th:text="|Cancel|"/>
+            <button class="btn btn-success ms-2" type="submit" th:text="Confirm"></button>
+        </div>
+    </form>
+</main>
+</body>
+</html>

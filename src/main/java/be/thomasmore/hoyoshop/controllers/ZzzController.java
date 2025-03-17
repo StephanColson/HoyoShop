@@ -39,7 +39,7 @@ public class ZzzController {
                       @RequestParam (required = false) Integer categoryId, Integer characterId, Integer outfitId,
                       @RequestParam (required = false) String priceFilter) {
         final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm,
-                "Zenless Zone Zero", categoryId, characterId, outfitId, priceFilter);
+                4, categoryId, characterId, outfitId, priceFilter);
 
         final Iterable<Category> categories = categoryRepository.findAll();
         final Iterable<GameCharacter> gameCharacterList = gameCharacterRepository.findByGameId(4);

@@ -39,7 +39,7 @@ public class GiController {
                      @RequestParam (required = false) Integer categoryId, Integer characterId, Integer outfitId,
                      @RequestParam (required = false) String priceFilter) {
         final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm,
-                "Genshin Impact", categoryId, characterId, outfitId, priceFilter);
+                2, categoryId, characterId, outfitId, priceFilter);
 
         final Iterable<Category> categories = categoryRepository.findAll();
         final Iterable<GameCharacter> gameCharacterList = gameCharacterRepository.findByGameId(2);

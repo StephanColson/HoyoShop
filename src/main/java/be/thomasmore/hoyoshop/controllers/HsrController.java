@@ -39,7 +39,7 @@ public class HsrController {
                       @RequestParam (required = false) Integer categoryId, Integer characterId, Integer outfitId,
                       @RequestParam (required = false) String priceFilter) {
         final Iterable<Product> products = productRepository.findBySearchFilter(searchTerm,
-                "Honkai Star Rail", categoryId, characterId, outfitId, priceFilter);
+                3, categoryId, characterId, outfitId, priceFilter);
 
         final Iterable<Category> categories = categoryRepository.findAll();
         final Iterable<GameCharacter> gameCharacterList = gameCharacterRepository.findByGameId(3);
