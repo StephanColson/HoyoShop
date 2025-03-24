@@ -14,6 +14,20 @@
 
         <h1 th:text="*{title}" class="mt-4 text-warning"/>
 
+        <div class="row">
+            <div class="col col-6 text-start">
+                <a th:href="@{|/gamedetails/*{id - 1}|}">
+                    <button class="btn btn-info" th:text="|<|">Previous</button>
+                </a>
+            </div>
+
+            <div class="col col-6 text-end">
+                <a th:href="@{|/gamedetails/*{id + 1}|}">
+                    <button class="btn btn-info" th:text="|>|">Next</button>
+                </a>
+            </div>
+        </div>
+
         <div>
             <p th:text="*{description}" class="text-light"/>
             <p class="text-light">

@@ -13,6 +13,21 @@
     <h1 th:replace="~{fragments/header :: navigation}">Navigation</h1>
 
     <main class="container" th:object="${product}">
+
+        <div class="row m-2">
+            <div class="col col-6 text-start">
+                <a th:href="@{|/hsrDetails/*{id - 1}|}">
+                    <button class="btn btn-info" th:text="|<|">Previous</button>
+                </a>
+            </div>
+
+            <div class="col col-6 text-end">
+                <a th:href="@{|/hsrDetails/*{id + 1}|}">
+                    <button class="btn btn-info" th:text="|>|">Next</button>
+                </a>
+            </div>
+        </div>
+
         <div class="row">
             <div class="d-flex justify-content-end m-2" sec:authorize="hasAuthority('ADMIN')">
                 <a class="btn btn-info" th:href="@{|/admin/hsredit/*{id}|}" th:text="|Edit|"></a>
