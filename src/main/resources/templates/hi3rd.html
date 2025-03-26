@@ -40,10 +40,13 @@
         </div>
     </form>
 
-    <button type="button" class="btn btn-info"
-            data-bs-toggle="modal"
-            data-bs-target="#hi3rdModal">Filters
-    </button>
+    <div class="d-flex justify-content-between m-2">
+        <button type="button" class="btn btn-info"
+                data-bs-toggle="modal"
+                data-bs-target="#hi3rdModal">Filters
+        </button>
+        <a sec:authorize="hasAuthority('ADMIN')" class="btn btn-primary" th:href="@{/admin/newproduct}" th:text="New"></a>
+    </div>
 
         <div class="row">
             <div th:each="product : ${products}" th:object="${product}" class="col-lg-4 col-md-4 col-6 my-2">
