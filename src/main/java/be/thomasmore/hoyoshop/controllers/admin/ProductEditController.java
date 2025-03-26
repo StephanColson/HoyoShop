@@ -52,18 +52,17 @@ public class ProductEditController {
     }
 
     @PostMapping("/hi3rdedit/{id}")
-    public String hi3rdeidt(@PathVariable int id, @Valid Product product, BindingResult bindingResult, MultipartFile imageFile) {
+    public String hi3rdeidt(@PathVariable int id, @Valid Product product, BindingResult bindingResult,
+                            @RequestParam("image") String imageUrl) {
 
         if(bindingResult.hasErrors()) {
             return "/admin/hi3rdedit";
         }
 
-        if (!imageFile.isEmpty()) {
-            String imagePath = saveImage(imageFile);
-            if (imagePath != null) {
-                System.out.println("New image saved to directory, but not updated in product record.");
-            }
+        if (imageUrl != null && !imageUrl.isEmpty()) {
+            product.setImage(imageUrl);
         }
+
         productRepository.save(product);
         return "redirect:/hi3rdDetails/" + id;
     }
@@ -75,18 +74,17 @@ public class ProductEditController {
     }
 
     @PostMapping("/giedit/{id}")
-    public String giedit(@PathVariable int id, Product product, BindingResult bindingResult,  MultipartFile imageFile) {
+    public String giedit(@PathVariable int id, @Valid Product product, BindingResult bindingResult,
+                         @RequestParam("image") String imageUrl) {
 
         if(bindingResult.hasErrors()) {
             return "/admin/giedit";
         }
 
-        if (!imageFile.isEmpty()) {
-            String imagePath = saveImage(imageFile);
-            if (imagePath != null) {
-                System.out.println("New image saved to directory, but not updated in product record.");
-            }
+        if (imageUrl != null && !imageUrl.isEmpty()) {
+            product.setImage(imageUrl);
         }
+
         productRepository.save(product);
         return "redirect:/giDetails/" + id;
     }
@@ -98,18 +96,17 @@ public class ProductEditController {
     }
 
     @PostMapping("/hsredit/{id}")
-    public String hsredit(@PathVariable int id, Product product, BindingResult bindingResult, MultipartFile imageFile) {
+    public String hsredit(@PathVariable int id, @Valid Product product, BindingResult bindingResult,
+                          @RequestParam("image") String imageUrl) {
 
         if(bindingResult.hasErrors()) {
             return "/admin/hsredit";
         }
 
-        if (!imageFile.isEmpty()) {
-            String imagePath = saveImage(imageFile);
-            if (imagePath != null) {
-                System.out.println("New image saved to directory, but not updated in product record.");
-            }
+        if (imageUrl != null && !imageUrl.isEmpty()) {
+            product.setImage(imageUrl);
         }
+
         productRepository.save(product);
         return "redirect:/hsrDetails/" + id;
     }
@@ -121,18 +118,17 @@ public class ProductEditController {
     }
 
     @PostMapping("/zzzedit/{id}")
-    public String zzzedit(@PathVariable int id, Product product, BindingResult bindingResult, MultipartFile imageFile) {
+    public String zzzedit(@PathVariable int id, @Valid Product product, BindingResult bindingResult,
+                          @RequestParam("image") String imageUrl) {
 
         if(bindingResult.hasErrors()) {
             return "/admin/zzzedit";
         }
 
-        if (!imageFile.isEmpty()) {
-            String imagePath = saveImage(imageFile);
-            if (imagePath != null) {
-                System.out.println("New image saved to directory, but not updated in product record.");
-            }
+        if (imageUrl != null && !imageUrl.isEmpty()) {
+            product.setImage(imageUrl);
         }
+
         productRepository.save(product);
         return "redirect:/zzzDetails/" + id;
     }
@@ -147,26 +143,18 @@ public class ProductEditController {
     }
 
     @PostMapping("/newproduct")
-    public String newProductPost(@ModelAttribute("product") Product product, BindingResult bindingResult) {
+    public String newProductPost(@ModelAttribute("product") Product product, BindingResult bindingResult,
+                                 @RequestParam("image") String imageUrl) {
 
         if(bindingResult.hasErrors()) {
             return "/admin/newproduct";
         }
 
+        if (imageUrl != null && !imageUrl.isEmpty()) {
+            product.setImage(imageUrl);
+        }
+
         productRepository.save(product);
         return "redirect:/home";
-    }
-
-
-    private String saveImage(MultipartFile imageFile) {
-        String fileName = imageFile.getOriginalFilename();
-        try {
-            Path path = Paths.get("src/main/resources/static/images/" + fileName);
-            Files.write(path, imageFile.getBytes());
-            return "/images/" + fileName;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 }

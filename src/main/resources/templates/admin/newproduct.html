@@ -26,12 +26,12 @@
                     <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.type}"></option>
                 </select>
             </div>
-            <!--
+
             <div>
                 <label for="image" th:text="|Add Image?|"/>
-                <input class="form-control" id="image" name="imageFile" type="file">
+                <input class="form-control" id="image" name="image" type="text">
             </div>
-            -->
+
             <div>
                 <label for="ProductName" th:text="|Product Name?|"/>
                 <input class="form-control" type="text" id="ProductName" name="name" th:field="*{name}" th:errorclass="is-invalid">

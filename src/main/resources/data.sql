@@ -738,12 +738,12 @@ VALUES
 INSERT INTO product (name, price, description, image, quantity, GAME_ID, CATEGORY_ID, start_date, end_date)
 VALUES
     --Honkai Impact 3rd--
-        ('Trio Poster', 17.5, 'Made with cotton', '/images/hi3rd/Friend group poster.jpg', 10, 1, 4, NULL, NULL),
-        ('Griseo Key-Chain', 15, 'It is arcylic plastic and contains 2 key-chains', '/images/hi3rd/Griseo key chain set.jpg', 7, 1, 3, NULL, NULL),
+        ('Trio Poster', 17.5, 'Made with cotton', 'https://vglist.sfo2.digitaloceanspaces.com/eet52sdubx9i57vm8pgmae5tpx0q', 10, 1, 4, NULL, NULL),
+        ('Griseo Key-Chain', 15, 'It is arcylic plastic and contains 2 key-chains', 'https://i.ebayimg.com/images/g/FiwAAOSwUd1jLUiq/s-l400.jpg', 7, 1, 3, NULL, NULL),
         --Limited Edition--
-        ('Herrscher of Finality figurine', 18, 'Made out of pvc', '/images/hi3rd/Herrscher of Finality figurine.jpg', 5, 1, 2, '2025-03-01 08:00:00', '2025-03-15 20:00:00'),
+        ('Herrscher of Finality figurine', 18, 'Made out of pvc', 'https://cdn.kyou.id/items/334421-pvc-figure-17-kiana-kaslana-evening-invite-ver-honkai-impact-3rd.jpg', 5, 1, 2, '2025-03-01 08:00:00', '2025-03-15 20:00:00'),
 
-        ('Herrscher of the Void figurine', 17, 'Made out of pvc', '/images/hi3rd/Herrscher of the Void figurine.webp', 13, 1, 2, NULL, NULL),
+        ('Herrscher of the Void figurine', 17, 'Made out of pvc', 'https://img.amiami.com/images/product/review/202/FIGURE-060045_01.jpg', 13, 1, 2, NULL, NULL),
         ('Honkai Impact Key-Chain set', 20, 'Arcylic plastic key-chains', '/images/hi3rd/keychain set.jpg', 9, 1, 3, NULL, NULL),
         ('Kiana Kaslana Poster', 15.5, 'Paper poster', '/images/hi3rd/Kiana Kaslana Poster.jpg', 10, 1, 4, NULL, NULL),
         ('Mobius Poster set', 60, 'Contains 6 posters', '/images/hi3rd/Mobius Poster set.jpg', 2, 1, 4, NULL, NULL),
