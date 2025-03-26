@@ -27,9 +27,6 @@ public class ProductEditController {
     private GameCharacterRepository gameCharacterRepository;
 
     @Autowired
-    private OutfitRepository outfitRepository;
-
-    @Autowired
     private GameRepository gameRepository;
     @Autowired
     private CategoryRepository categoryRepository;
@@ -56,6 +53,7 @@ public class ProductEditController {
 
     @PostMapping("/hi3rdedit/{id}")
     public String hi3rdeidt(@PathVariable int id, @Valid Product product, BindingResult bindingResult, MultipartFile imageFile) {
+
         if(bindingResult.hasErrors()) {
             return "/admin/hi3rdedit";
         }

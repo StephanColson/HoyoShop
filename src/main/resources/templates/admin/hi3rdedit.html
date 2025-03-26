@@ -35,7 +35,7 @@
             </div>
             <div>
                 <label for="ProductPrice" th:text="|Change Product Price?|"/>
-                <input class="form-control" id="ProductPrice" name="price" type="number" th:field="*{price}">
+                <input class="form-control" id="ProductPrice" name="price" type="number" step="0.01" th:field="*{price}">
             </div>
 
             <div th:if="*{startDate != null and endDate != null}">
