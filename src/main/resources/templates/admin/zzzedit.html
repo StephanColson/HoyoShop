@@ -20,6 +20,7 @@
         </div>
 
         <div class="row">
+            <div th:if="${#fields.hasErrors('*')}">Error - Data not saved</div>
             <div>
                 <label for="image" th:text="|Change Image?|"/>
                 <input class="form-control" id="image" name="image" type="file">

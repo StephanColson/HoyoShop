@@ -75,7 +75,12 @@ public class ProductEditController {
     }
 
     @PostMapping("/giedit/{id}")
-    public String giedit(@PathVariable int id, Product product, MultipartFile imageFile) {
+    public String giedit(@PathVariable int id, Product product, BindingResult bindingResult,  MultipartFile imageFile) {
+
+        if(bindingResult.hasErrors()) {
+            return "/admin/giedit";
+        }
+
         if (!imageFile.isEmpty()) {
             String imagePath = saveImage(imageFile);
             if (imagePath != null) {
@@ -93,7 +98,12 @@ public class ProductEditController {
     }
 
     @PostMapping("/hsredit/{id}")
-    public String hsredit(@PathVariable int id, Product product, MultipartFile imageFile) {
+    public String hsredit(@PathVariable int id, Product product, BindingResult bindingResult, MultipartFile imageFile) {
+
+        if(bindingResult.hasErrors()) {
+            return "/admin/hsredit";
+        }
+
         if (!imageFile.isEmpty()) {
             String imagePath = saveImage(imageFile);
             if (imagePath != null) {
@@ -111,7 +121,12 @@ public class ProductEditController {
     }
 
     @PostMapping("/zzzedit/{id}")
-    public String zzzedit(@PathVariable int id, Product product, MultipartFile imageFile) {
+    public String zzzedit(@PathVariable int id, Product product, BindingResult bindingResult, MultipartFile imageFile) {
+
+        if(bindingResult.hasErrors()) {
+            return "/admin/zzzedit";
+        }
+
         if (!imageFile.isEmpty()) {
             String imagePath = saveImage(imageFile);
             if (imagePath != null) {
@@ -132,7 +147,12 @@ public class ProductEditController {
     }
 
     @PostMapping("/newproduct")
-    public String newProductPost(@ModelAttribute("product") Product product) {
+    public String newProductPost(@ModelAttribute("product") Product product, BindingResult bindingResult) {
+
+        if(bindingResult.hasErrors()) {
+            return "/admin/newproduct";
+        }
+
         productRepository.save(product);
         return "redirect:/home";
     }
